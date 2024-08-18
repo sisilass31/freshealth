@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: Amertha;
+  src: url(./assets/font/Amertha_PERSONAL_USE_ONLY.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkgreen: #50A946;
+  --green: #8DBE4C;
+  --light-green: #D6E8BF;
+  --gradient: linear-gradient(
+    0deg,
+    rgba(80, 169, 70, 1) 0%,
+    rgba(141, 190, 76, 1) 100%
+  );
+  --background: #F3F3F3;
+  --beige: #F2EFDC;
+  --white: #ffffff;
+  --black: #1E1E1E;
+  --grey: #D9D9D9;
+  --light-grey: #919191;
+  --like: #E85353;
+  --border: #CCCCCC;
+}
+
+/*general*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/*general*/
+
+/*début navbar*/
+/*fin navbar*/
+
+/*début accueil*/
+/*fin accueil*/
+
+/*début profile*/
+/*fin profile*/
+
+/*début erreur*/
+/*fin erreur*/
+
+/*debut footer*/
+/*fin footer*/
