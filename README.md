@@ -48,4 +48,4 @@ Voici une version complétée :
 
 #### Font
 
-Titres: `Amertha` Paragraphes: `Poppins`
+Logo: `Amertha` Paragraphes: `Poppins`
