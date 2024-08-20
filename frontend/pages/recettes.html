@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,141 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/css/recettes.css">
     <!-- boxicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- title -->
     <title>Recettes - Freshealth</title>
 </head>
+
 <body>
+
     <!-- contenu recettes -->
+    <!-- !!!!!!!!!!!!!!!!!! SYRINE POP UP !!!!!!!!!!!!!!!-->
+    <div class="popUpComplet">
+        <!--  !!!VIDEO!!! -->
+        <video class="background-video" src="../assets/videos/Recette Bagel.mp4" controls autoplay loop muted>p
+        </video>
+
+        <div class="popUp">
+            <!--  !!! BLOC TITRE DE LA RECETTE !!! -->
+
+            <section class="titrerecettePop">
+
+                <div class="recettePopup">
+
+                    <div class="titre-popup">
+                        <h2>Bagel au saumon </h2>
+                        <h6>Mots clés : Saumon, concombre, bagel</h6>
+                    </div>
+                    <div class="iconePopUp">
+                        <i class='bx bxs-heart'>Likes</i>
+                        <i class='bx bxs-share'>Partage</i>
+                        <i class='bx bx-plus'>Ma liste</i>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, doloribus quae. Laudantium
+                    veniam
+                    velit exercitationem voluptas voluptatem reiciendis enim culpa eos non itaque accusantium, unde qui
+                    rerum
+                    provident error labore magni tempore officiis veritatis adipisci. Rerum, quod voluptate illum
+                    repellendus
+                    quasi voluptatem!</p>
+
+            </section>
+
+            <!-- !!! BLOC INGREDIENTS !!! -->
+
+            <h2 class="titre-ingredients">Ingrédients</h2>
+            <div class="ingredients">
+
+                <div class="card"><img src="../assets/images/Image Indrégients/pain bagel.jpeg"> Pain Bagel
+                    <button class="ajouter-course"> Ajouter aux courses </button>
+                </div>
+
+                <div class="card"><img src="../assets/images/Image Indrégients/fromage frais.jpeg">Fromage frais
+                    <button class="ajouter-course">Ajouter aux courses </button>
+                </div>
+
+                <div class="card"><img src="../assets/images/Image Indrégients/mache.jpeg">Mâche
+                    <button class="ajouter-course">Ajouter aux courses </button>
+                </div>
+
+                <div class="card"><img src="../assets/images/Image Indrégients/saumon fumé.jpeg"> Saumon fumé
+                    <button class="ajouter-course">Ajouter aux courses </button>
+                </div>
+
+
+            </div>
+
+            <!--  !!! BLOC ETAPES DE PREPARATION !!! -->
+
+            <section class="preparationPop">
+
+                <h2>Étapes de Préparation</h2>
+
+                <div class="step-containerPop">
+                    <div class="step-number">1</div>
+                    <div class="step-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        illum
+                        suscipit molestiae labore corrupti illo in fugiat accusantium. Eveniet magni recusandae ab
+                        molestiae
+                        dolorem consequatur dolore eius adipisci, iure eligendi ipsum corporis quisquam .</div>
+                </div>
+
+                <div class="step-containerPop">
+                    <div class="step-number">2</div>
+                    <div class="step-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        illum
+                        suscipit molestiae labore corrupti illo in fugiat accusantium. Eveniet magni recusandae ab
+                        molestiae
+                        dolorem consequatur dolore eius adipisci, iure eligendi ipsum corporis quisquam .</div>
+                </div>
+
+                <div class="step-containerPop">
+                    <div class="step-number">3</div>
+                    <div class="step-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        illum
+                        suscipit molestiae labore corrupti illo in fugiat accusantium. Eveniet magni recusandae ab
+                        molestiae
+                        dolorem consequatur dolore eius adipisci, iure eligendi ipsum corporis quisquam .</div>
+                </div>
+
+                <div class="step-containerPop">
+                    <div class="step-number">4</div>
+                    <div class="step-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        illum
+                        suscipit molestiae labore corrupti illo in fugiat accusantium. Eveniet magni recusandae ab
+                        molestiae
+                        dolorem consequatur dolore eius adipisci, iure eligendi ipsum corporis quisquam ratione quia
+                        explicabo
+                        similique inventore consectetur quibusdam modi consequuntur.</div>
+                </div>
+
+                <div class="step-containerPop">
+                    <div class="step-number">5</div>
+                    <div class="step-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        illum
+                        suscipit molestiae labore corrupti illo in fugiat accusantium. Eveniet magni recusandae ab
+                        molestiae
+                        dolorem consequatur dolore eius adipisci, iure eligendi ipsum corporis quisquam ratione quia
+                        explicabo
+                        similique inventore consectetur quibusdam modi consequuntur.</div>
+                </div>
+
+            </section>
+
+
+
+        </div>
+    </div>
+
     <main>
         <!-- on va faire un js qui permet de créer une carte recette à partir de tous les objets de la page objects-recettes puis de faire des boutons "filtres" -->
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

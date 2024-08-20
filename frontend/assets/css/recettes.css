@@ -2,4 +2,108 @@
 /*fin recettes*/
 
 /*début pop up recettes*/
-/*fin pop up recettes*/
+.popUp {
+    margin: auto;
+    max-width: 795px;
+}
+
+/* .titre-popup h2 {
+    font-weight: normal;
+} */
+
+/*!!!!!! SECTION TITRE !!!!!!*/
+.titrerecettePop h6 {
+   color: #919191; 
+   font-weight: normal;
+}
+
+/*VIDEO DE FOND */
+.background-video {
+    height: 70vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+/*!!!!!! TOUT LE POP UP !!!!!!*/
+.popUpComplet {
+    width: 80%;
+    max-width: 1000px;
+    justify-content: center;
+}
+/*!!!!!! TOUTE LA SECTION RECETTE !!!!!!*/
+.titrerecettePop {
+    padding: 20px;
+}
+/*!!!!!! TITRE + ICONES likes ,partages ,ma liste  !!!!!!*/
+.recettePopup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*!!!!!! ICONES + TITRE likes, partages, ma liste !!!!!!*/
+.iconePopUp {
+    display: flex;
+    gap: 10px;
+}
+
+/*!!!!!! SEULEMENT LES ICONES , image (i= icone) !!!!!!*/
+
+.iconePopUp i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*!!!!!! SECTION RECETTE p  !!!!!!*/
+
+.titrerecettePop p {
+    padding: 20px;
+}
+
+
+
+/*CARDS */
+
+/*!!!!!! CARDS INGREDIENTS!!!!!!*/
+.ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients div {
+    width: 150px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card{
+    transition: transform 0.5s ease;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/*Bouton ajouter aux courses / ingrédients */
+
+.ajouter-course {
+    border-color: #8DBE4C ;
+    background-color: #8DBE4C;
+    border-radius: 3px;
+}
+
