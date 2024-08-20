@@ -1,51 +1,108 @@
-/*début recettes*/
-/*fin recettes*/
+/*DEBUT RECETTE */
 
-/*début pop up recettes*/
-.popUp {
-    margin: auto;
-    max-width: 795px;
+
+/*DEBUT POP UP*/
+
+/*!!!!!! TOUT LE POP UP !!!!!!*/
+
+.popUpComplet {
+    align-items: center;
+    height: 100vh;
 }
 
-/* .titre-popup h2 {
-    font-weight: normal;
-} */
+.popUp {
+    margin: auto; /*Cette propriété indique que les marges gauche et droite doivent être automatiquement calculées de manière égale. Cela centre l'élément horizontalement au milieu de son conteneur parent. Pour que cela fonctionne correctement, l'élément doit avoir une largeur définie (comme avec max-width).*/
+    max-width: 1200px; /* Cela signifie que l'élément ne s'étendra jamais au-delà de cette largeur, même si l'écran est plus large. Si l'écran est plus petit que 1200px, l'élément s'adaptera à la largeur disponible, tout en restant centré grâce à margin: auto. */
+}
 
 /*!!!!!! SECTION TITRE !!!!!!*/
-.titrerecettePop h6 {
+
+.titrerecettePopUp h6 {
    color: #919191; 
-   font-weight: normal;
+   font-weight: normal; /*Spécifie l'épaisseur du texte. normal signifie que le texte aura un poids de police standard (ni gras, ni léger).*/
+   padding: 15px 0; /* Ajoute un espacement intérieur (padding) de 15px en haut et en bas de l'élément, et 0px sur les côtés gauche et droit. Cet espacement crée de l'air autour du contenu à l'intérieur de l'élément. */
+}
+
+.titrerecettePopUp p {
+    padding: 20px 0; /*20px en haut et en bas : Un espace de 20 pixels est ajouté à l'intérieur de l'élément, au-dessus et en dessous de son contenu.
+    0 à gauche et à droite : Aucun espace n'est ajouté sur les côtés gauche et droit de l'élément. */
+}
+
+
+.titrePopUp h2 {
+    text-align: center; 
 }
 
 /*VIDEO DE FOND */
-.background-video {
-    height: 70vh;
-    width: 100vw;
-    object-fit: cover;
+
+.video-container {
+    height: 70vh;  /* Hauteur de l'image à 70% de la hauteur de la fenêtre */
+    width: 100vw; /* Largeur de l'image à 100% de la largeur de la fenêtre */
+    object-fit: cover; /* Largeur de l'image à 100% de la largeur de la fenêtre */
 }
 
-/*!!!!!! TOUT LE POP UP !!!!!!*/
-.popUpComplet {
-    width: 80%;
-    max-width: 1000px;
-    justify-content: center;
+.play-checkbox {
+    display: none; /* Masque l'input checkbox */
 }
+
+.video-label {
+    display: block; /*  assure que l'image occupe toute la largeur disponible. */
+    width: 100%;  /* Largeur de l'image à 100% du conteneur */
+    height: 100%; /* Hauteur de l'image à 100% du conteneur */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    top: 0; /* Positionne l'image au bord supérieur du conteneur */
+    left: 0; /* Positionne l'image au bord gauche du conteneur */
+    z-index: 2; /* Place l'étiquette au-dessus de la vidéo */
+
+}
+
+.background-image {
+    width: 100%; /* Largeur de l'image à 100% de la largeur de la fenêtre */
+    height: 95%;  /* Hauteur de l'image à 95% de la hauteur de la fenêtre */
+    object-fit: cover; /* Largeur de l'image à 100% de la largeur de la fenêtre */
+}
+
+.play-button {
+    position: absolute; /* Positionnement absolu par rapport au conteneur parent */
+    top: 35%; /* Positionnement vertical à 35% de la hauteur du conteneur */
+    left: 50%; /* Positionnement horizontal à 50% de la largeur du conteneur */
+    transform: translate(-50%, -50%); /* Centrage de l'élément */
+    font-size: 50px; /* Taille de la police */
+    color: #919191;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    display: none; /* Masquer la vidéo par défaut */
+    z-index: 1; /* Élement empilé au-dessus */
+}
+
+
+.play-checkbox:checked ~ .video { /* Afficher la vidéo au clic */
+    display: block;
+}
+
+
+.play-checkbox:checked ~ .video-label { /* Masquer l'image et le bouton play après le clic */
+    display: none; /* L'élément est complètement masqué */
+}
+
+
 /*!!!!!! TOUTE LA SECTION RECETTE !!!!!!*/
-.titrerecettePop {
-    padding: 20px;
-}
+
 /*!!!!!! TITRE + ICONES likes ,partages ,ma liste  !!!!!!*/
-.recettePopup {
+.recettePopUp {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: space-between; /* Espacement égal entre les éléments */
 }
 
 /*!!!!!! ICONES + TITRE likes, partages, ma liste !!!!!!*/
 .iconePopUp {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Espacement entre les éléments */
+    font-size: 1.2rem;
 }
 
 /*!!!!!! SEULEMENT LES ICONES , image (i= icone) !!!!!!*/
@@ -58,52 +115,151 @@
     
 }
 
+.icon-button {
+    display: flex;
+    align-items: center; /* Centre verticalement l'icône et le texte */
+    gap: 8px; /* Espace entre l'icône et le texte */
+    padding: 8px 12px; /* Espace intérieur autour du texte */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer; /* Curseur en forme de main pour indiquer un élément cliquable */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitions pour les changements de couleur de fond et les transformations */
+    
+}
+
+.icon-button i {
+    font-size: 20px; /* Taille de l'icône */
+}
+
+.icon-button:hover {
+    background-color: #8DBE4C;
+    transform: translateY(-2px); /* Effet de soulèvement au survol */
+}
+
+.icon-button:active {
+    transform: translateY(0); /* Supprime l'effet de soulèvement lors du clic */
+}
+
 /*!!!!!! SECTION RECETTE p  !!!!!!*/
 
 .titrerecettePop p {
     padding: 20px;
+    display: flex;
+
 }
-
-
 
 /*CARDS */
 
 /*!!!!!! CARDS INGREDIENTS!!!!!!*/
-.ingredients {
+.ingredients-popup {
     display: flex;
-    flex-wrap: wrap;
-    gap: 48px;
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    gap: 150px;
     justify-content: center;
     align-items: center;
 }
 
-.ingredients div {
-    width: 150px;
+.ingredients-popup div {
+    width: 150px; /* Définit la largeur de l'élément */
     text-align: center;
     background: white;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Crée un espace de 10 pixels autour du contenu de l'élément, à l'intérieur des bordures. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre floue de 10 pixels autour de l'élément, avec une couleur noire semi-transparente. */
 }
 
-.ingredients img {
+.ingredients-popup img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    object-fit: cover; /* L'image couvre entièrement le conteneur */
     border-radius: 10px;
 }
 
-.card{
-    transition: transform 0.5s ease;
-    margin-top: 30px;
-    margin-bottom: 60px;
+.cardPopUp{
+    transition: transform 0.5s ease; /* Définit une transition fluide pour les transformations avec une durée de 0.5 seconde et une courbe de transition douce. */
+    margin-top: 30px; /* Espace de 30 pixels au-dessus de l'élément */
+    margin-bottom: 60px; * Espace de 60 pixels en dessous de l'élément */
 }
+
 
 /*Bouton ajouter aux courses / ingrédients */
 
-.ajouter-course {
-    border-color: #8DBE4C ;
-    background-color: #8DBE4C;
-    border-radius: 3px;
+.ajouter-course-PopUp {
+    border-color: #8DBE4C ; 
+    background-color:#8DBE4C;
+    padding: 2px;
+    
 }
 
+.step-containerPopUp {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+ 
+}
+
+.step-number-PopUp {
+    font-size: 1.3em; /* Taille du nombre */
+    font-weight: bold; /* Met le nombre en gras pour plus de visibilité */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur si nécessaire */
+    display: flex;
+    align-items: center;
+    
+}
+
+.step-description-PopUp {
+    font-size: 1em; /* Taille du texte descriptif */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.preparationPopUp h2 {
+    padding: 35px 0;
+}
+
+  /* !!!!!!!TABLEAU !!!!!!! */
+
+.time-table {
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;  /* Masque le contenu qui dépasse le conteneur */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre portée */
+    
+}
+
+.time-table h2 {
+    background-color: #f8f8f8;
+    color: black;
+    padding: 10px;
+    margin: 0; /* utilisée pour créer un espace extérieur autour des éléments, en les séparant des autres éléments ou des bords de leur conteneur. Elle définit l'espace entre l'extérieur de la bordure d'un élément et les éléments voisins ou le bord de la page.*/
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* FIN POP UP */
+
+/*FIN RECETTE*/
