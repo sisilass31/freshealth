@@ -21,10 +21,7 @@
     rgba(141, 190, 76, 1) 100%
   );
   --background: #f3f3f3;
-<<<<<<< HEAD
   --background-dark: #8a8a8a;
-=======
->>>>>>> 3bebf9a2862ae7adde8d87fbf2d87a7efc40294f
   --beige: #f2efdc;
   --white: #ffffff;
   --black: #1e1e1e;
@@ -500,7 +497,6 @@ input[type="password"] {
 /*fin contact*/
 
 /*debut footer*/
-<<<<<<< HEAD
 
 footer svg {
   display: block;
@@ -796,6 +792,3 @@ footer svg {
   }
 }
 /*responsive*/
-=======
-/*fin footer*/
->>>>>>> 3bebf9a2862ae7adde8d87fbf2d87a7efc40294f
