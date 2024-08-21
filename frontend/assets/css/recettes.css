@@ -1,202 +1,259 @@
 /*DEBUT RECETTE */
 
-
 /*DEBUT POP UP*/
 
 /*!!!!!! TOUT LE POP UP !!!!!!*/
 
+/* pop up modal*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Opacité augmentée pour un fond plus sombre */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden; /* Cache tout débordement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour une meilleure séparation du fond */
+  max-height: 90vh; /* Limite la hauteur du contenu pour éviter les débordements */
+  overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur maximale */
+  border-radius: 15px;
+  /* Cacher la scrollbar pour Firefox */
+  scrollbar-width: none;
+  /* Cacher la scrollbar pour IE et Edge */
+  -ms-overflow-style: none;
+}
+/* Cacher la scrollbar pour les navigateurs basés sur WebKit (Chrome, Safari) */
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.close-popup {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* pop up modal*/
+
 .popUpComplet {
-    align-items: center;
-    height: 100vh;
+  align-items: center;
 }
 
 .popUp {
-    margin:  20px auto; /*Cette propriété indique que les marges gauche et droite doivent être automatiquement calculées de manière égale. Cela centre l'élément horizontalement au milieu de son conteneur parent. Pour que cela fonctionne correctement, l'élément doit avoir une largeur définie (comme avec max-width).*/
-    max-width: 1200px; /* Cela signifie que l'élément ne s'étendra jamais au-delà de cette largeur, même si l'écran est plus large. Si l'écran est plus petit que 1200px, l'élément s'adaptera à la largeur disponible, tout en restant centré grâce à margin: auto. */
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+.popUp h2 {
+  font-weight: 400;
 }
 
 /*!!!!!! SECTION TITRE !!!!!!*/
 
 .titrerecettePopUp h6 {
-   color: #919191; 
-   font-weight: normal; /*Spécifie l'épaisseur du texte. normal signifie que le texte aura un poids de police standard (ni gras, ni léger).*/
-   /* padding: 15px 0; */ /* Ajoute un espacement intérieur (padding) de 15px en haut et en bas de l'élément, et 0px sur les côtés gauche et droit. Cet espacement crée de l'air autour du contenu à l'intérieur de l'élément. */
+  color: #919191;
+  font-weight: normal;
 }
 
 .titrerecettePopUp p {
-    padding: 20px 0; /*20px en haut et en bas : Un espace de 20 pixels est ajouté à l'intérieur de l'élément, au-dessus et en dessous de son contenu.
-    0 à gauche et à droite : Aucun espace n'est ajouté sur les côtés gauche et droit de l'élément. */
+  padding: 20px 0;
 }
 
-
 .titrePopUp h2 {
-    text-align: center; 
+  text-align: center;
 }
 
 /*VIDEO DE FOND */
 
 .video-container {
-    height: 70vh;  /* Hauteur de l'image à 70% de la hauteur de la fenêtre */
-    width: 100vw; /* Largeur de l'image à 100% de la largeur de la fenêtre */
-    object-fit: cover; /* Largeur de l'image à 100% de la largeur de la fenêtre */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Centre horizontalement */
+  position: relative;
+  padding-top: 55%; /* Pour maintenir le ratio 16:9 */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste la vidéo pour qu'elle couvre tout le conteneur sans dépasser */
 }
 
 .play-checkbox {
-    display: none; /* Masque l'input checkbox */
+  display: none;
 }
 
 .video-label {
-    display: block; /*  assure que l'image occupe toute la largeur disponible. */
-    width: 100%;  /* Largeur de l'image à 100% du conteneur */
-    height: 100%; /* Hauteur de l'image à 100% du conteneur */
-    cursor: pointer; /* Curseur en forme de main au survol */
-    top: 0; /* Positionne l'image au bord supérieur du conteneur */
-    left: 0; /* Positionne l'image au bord gauche du conteneur */
-    z-index: 2; /* Place l'étiquette au-dessus de la vidéo */
-
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-image {
-    width: 100%; /* Largeur de l'image à 100% de la largeur de la fenêtre */
-    height: 100%;  /* Hauteur de l'image à 95% de la hauteur de la fenêtre */
-    object-fit: cover; /* Largeur de l'image à 100% de la largeur de la fenêtre */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .play-button {
-    position: absolute; /* Positionnement absolu par rapport au conteneur parent */
-    top: 35%; /* Positionnement vertical à 35% de la hauteur du conteneur */
-    left: 50%; /* Positionnement horizontal à 50% de la largeur du conteneur */
-    transform: translate(-50%, -50%); /* Centrage de l'élément */
-    font-size: 50px; /* Taille de la police */
-    color: #919191;
+  position: absolute;
+  font-size: 50px;
+  color: var(--white);
 }
 
 .video {
-    width: 100%;
-    height: 100%;
-    display: none; /* Masquer la vidéo par défaut */
-    z-index: 1; /* Élement empilé au-dessus */
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
 }
 
-
-.play-checkbox:checked ~ .video { /* Afficher la vidéo au clic */
-    display: block;
+.play-checkbox:checked ~ .video {
+  display: block;
 }
 
-
-.play-checkbox:checked ~ .video-label { /* Masquer l'image et le bouton play après le clic */
-    display: none; /* L'élément est complètement masqué */
+.play-checkbox:checked ~ .video-label {
+  display: none;
 }
-
 
 /*!!!!!! TOUTE LA SECTION RECETTE !!!!!!*/
 
-/*!!!!!! TITRE + ICONES likes ,partages ,ma liste  !!!!!!*/
 .recettePopUp {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Espacement égal entre les éléments */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*!!!!!! ICONES + TITRE likes, partages, ma liste !!!!!!*/
+
 .iconePopUp {
-    display: flex;
-    gap: 10px; /* Espacement entre les éléments */
-    font-size: 1.2rem;
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
 }
 
-/*!!!!!! SEULEMENT LES ICONES , image (i= icone) !!!!!!*/
-
 .iconePopUp i {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-button {
-    display: flex;
-    align-items: center; /* Centre verticalement l'icône et le texte */
-    gap: 8px; /* Espace entre l'icône et le texte */
-    padding: 8px 12px; /* Espace intérieur autour du texte */
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    cursor: pointer; /* Curseur en forme de main pour indiquer un élément cliquable */
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitions pour les changements de couleur de fond et les transformations */
-    
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .icon-button i {
-    font-size: 20px; /* Taille de l'icône */
+  font-size: 20px;
 }
 
 .icon-button:hover {
-    background-color: #8DBE4C;
-    transform: translateY(-2px); /* Effet de soulèvement au survol */
+  background-color: #8dbe4c;
+  transform: translateY(-2px);
 }
 
 .icon-button:active {
-    transform: translateY(0); /* Supprime l'effet de soulèvement lors du clic */
+  transform: translateY(0);
 }
-
-/*!!!!!! SECTION RECETTE p  !!!!!!*/
 
 .titrerecettePop p {
-    padding: 20px;
-    display: flex;
-
+  padding: 20px;
+  display: flex;
 }
 
-/*CARDS */
-
-/*!!!!!! CARDS INGREDIENTS!!!!!!*/
 .ingredients-popup {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
-    gap: 150px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
 }
 
 .ingredients-popup div {
-    width: 150px; /* Définit la largeur de l'élément */
-    text-align: center;
-    background: white;
-    border-radius: 10px;
-    padding: 10px; /* Crée un espace de 10 pixels autour du contenu de l'élément, à l'intérieur des bordures. */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre floue de 10 pixels autour de l'élément, avec une couleur noire semi-transparente. */
+  width: 150px;
+  text-align: center;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .ingredients-popup img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* L'image couvre entièrement le conteneur */
-    border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.cardPopUp{
-    transition: transform 0.5s ease; /* Définit une transition fluide pour les transformations avec une durée de 0.5 seconde et une courbe de transition douce. */
-    margin-top: 30px; /* Espace de 30 pixels au-dessus de l'élément */
-    margin-bottom: 60px; /* Espace de 60 pixels en dessous de l'élément */
+.cardPopUp {
+  transition: transform 0.5s ease;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
-
-
-/*Bouton ajouter aux courses / ingrédients */
 
 .ajouter-course-PopUp {
-    border-color: #8DBE4C ; 
-    background: var(--gradient);
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    color: white;
+  border-color: #8dbe4c;
+  background: var(--gradient);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  color: var(--white);
 }
 
 .ajouter-course-PopUp:active {
-   color: #f4f4f4
+  color: #f4f4f4;
 }
 
 .etapes-popup {
@@ -204,55 +261,34 @@
   gap: 40px;
   align-items: center;
   border-radius: 6px;
- 
 }
 
 .step-number-PopUp {
-    font-size: 1.3em; /* Taille du nombre */
-    font-weight: bold; /* Met le nombre en gras pour plus de visibilité */
-    text-align: center; /* Centre le texte à l'intérieur du conteneur si nécessaire */
-    display: flex;
-    align-items: center;
-    
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .step-containerPopUp {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .step-description-PopUp {
-    font-size: 1em; /* Taille du texte descriptif */
-    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 .preparationPopUp h2 {
-    padding: 13px 0;
+  padding: 13px 0;
 }
 
-  /* !!!!!!!TABLEAU !!!!!!! */
-
-
-
-/*!!!!! RESPONSIVE !!!!! */
-
-
-@media screen and (max-width: 550px){
-    .recettePopUp {
-       flex-direction: column;
-    }
-    .popUp {
-        padding: 0 20px;
-    }
-}
 /* FIN POP UP */
 
 /*FIN RECETTE*/
-
-
-
-
 
 /* TABLEAU 
 
@@ -266,7 +302,7 @@
     color: black;
     padding: 10px;
     margin: 0; /* utilisée pour créer un espace extérieur autour des éléments, en les séparant des autres éléments ou des bords de leur conteneur. Elle définit l'espace entre l'extérieur de la bordure d'un élément et les éléments voisins ou le bord de la page.*/
-   /*  text-align: center; */
+/*  text-align: center; */
 /* } */
 
 /* table {
@@ -286,15 +322,7 @@ tbody td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: center;
-} */ 
-
-
-
-
-
-
-
-
+} */
 
 /*début recettes*/
 .containerecipe {
@@ -328,10 +356,10 @@ tbody td {
   padding: auto;
   gap: 30px;
 }
-.recipe {
-  font-weight: 400;
-}
 
+.filtres-recipes {
+  display: none;
+}
 .cardrecipe {
   /* background-color: black; */
   width: 100%;
@@ -341,15 +369,17 @@ tbody td {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 50px auto;
+  gap: 50px;
   padding: auto;
 }
 .imgrecipe {
   width: 225px;
   height: 225px;
-  margin: 70px auto 0px auto;
+  margin: 0px auto;
   display: block;
   position: relative;
+  top: 70px;
   object-fit: cover;
   z-index: 2;
 }
@@ -362,7 +392,6 @@ tbody td {
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
   padding: 90px 30px 20px 30px;
-  margin: -70px 40px 30px 40px;
 }
 .titlerecipe {
   margin-bottom: 15px;
@@ -376,6 +405,7 @@ tbody td {
   font-size: 35px;
 }
 .buttonrecipevoirplus {
+  cursor: pointer;
   padding: 10px 35px;
   background-color: #8dbe4c;
   border: none;
@@ -390,3 +420,56 @@ tbody td {
 
 /*début pop up recettes*/
 /*fin pop up recettes*/
+
+@media screen and (max-width: 550px) {
+  .recettePopUp {
+    flex-direction: column;
+
+    align-items: start;
+  }
+  .popUp {
+    padding: 0 20px;
+  }
+  .popUpComplet {
+    padding: 0;
+  }
+  .popUp {
+    margin: 20px auto !important;
+    max-width: none !important;
+    padding: 0 20px;
+  }
+  .popUp {
+    margin: 20px auto !important;
+    max-width: none !important;
+  }
+  .icon-button {
+    padding: 2px 5px !important;
+    font-size: 12px;
+  }
+  .iconePopUp {
+    margin-top: 16px;
+  }
+  .titrerecettePopUp p {
+    font-size: 14px;
+  }
+  .titrerecettePopUp {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0px;
+  }
+  .modal {
+    left: 0;
+    align-items: start;
+  }
+  .titre-recipe-filtre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
