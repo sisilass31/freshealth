@@ -21,7 +21,10 @@
     rgba(141, 190, 76, 1) 100%
   );
   --background: #f3f3f3;
+<<<<<<< HEAD
   --background-dark: #8a8a8a;
+=======
+>>>>>>> 3bebf9a2862ae7adde8d87fbf2d87a7efc40294f
   --beige: #f2efdc;
   --white: #ffffff;
   --black: #1e1e1e;
@@ -233,6 +236,129 @@ h1 {
 /*fin accueil*/
 
 /*début profile*/
+
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+}
+
+.profile-sidebar {
+  flex: 1;
+  
+}
+
+.profile-sidebar ul {
+  list-style-type: none;
+}
+
+.profile-sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.profile-sidebar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--green);
+}
+
+.profile-sidebar ul li a:hover {
+  color: var(--darkgreen);
+}
+
+.profile-main-content {
+  flex: 3;
+}
+
+.security-section {
+  display: none;
+}
+
+#profile {
+  display: block;
+}
+
+.profile-details {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+form {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+}
+
+.edit-button {
+  padding: 10px 15px;
+  background-color: var(--light-green);
+  color: var(--green);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: var(--light-green);
+  color: var(--darkgreen);
+}
+
+.security-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.delete-button {
+  background-color: var(--light-green);
+  padding: 10px 15px;
+  color: var(--green);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.delete-button:hover {
+  background-color: var(--light-green);
+  color: var(--darkgreen);
+}
+
 /*fin profile*/
 
 /*début erreur*/
@@ -374,6 +500,7 @@ h1 {
 /*fin contact*/
 
 /*debut footer*/
+<<<<<<< HEAD
 
 footer svg {
   display: block;
@@ -669,3 +796,6 @@ footer svg {
   }
 }
 /*responsive*/
+=======
+/*fin footer*/
+>>>>>>> 3bebf9a2862ae7adde8d87fbf2d87a7efc40294f
