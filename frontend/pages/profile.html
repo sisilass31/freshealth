@@ -13,9 +13,86 @@
     <title>Mon Compte - Freshealth</title>
 </head>
 <body>
-    <!-- contenu mon compte -->
-    <main>
+
+    <div class="profile-container">
         
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <ul>
+                    <li><a href="#" onclick="showSection('profile')">Profil</a></li>
+                    <li><a href="#" onclick="showSection('favorites')">Mes Favoris</a></li>
+                    <li><a href="#" onclick="showSection('mylist')">Ma Liste</a></li>
+                    <li><a href="#" onclick="showSection('security')">Sécurité</a></li>
+                </ul>
+            </div>
+            <div class="profile-main-content">
+                <!-- Section Profil -->
+                <div id="profile" class="section" style="display: block;">
+                    <div class="profile-details">
+                        <img src="/frontend/assets/images/profile-photo.jpg" alt="Photo de Profil" class="profile-photo">
+                        <form>
+                            <label for="first-name">Prénom:</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Jean">
+
+                            <label for="last-name">Nom:</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Dupont">
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="jean.dupont@example.com">
+
+                            <label for="address">Adresse:</label>
+                            <input type="text" id="address" name="address" placeholder="123 Rue Exemple, Paris">
+
+                            <label for="phone">Téléphone:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00">
+
+                            <button type="submit" class="edit-button">Modifier</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Section Sécurité -->
+                <div id="security" class="section" style="display: none;">
+                    <form>
+                        <label for="current-password">Mot de passe actuel:</label>
+                        <input type="password" id="current-password" name="current-password">
+
+                        <label for="new-password">Nouveau mot de passe:</label>
+                        <input type="password" id="new-password" name="new-password">
+
+                        <label for="confirm-password">Confirmer le mot de passe:</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+
+                       <div class="button-security">
+                        <button type="submit" class="edit-button">Modifier le mot de passe</button>
+                        <div class="security-options">
+                            <button class="delete-button" onclick="showSection('delete-account')">Supprimer le compte</button>
+                        </div>
+                       </div>
+                    </form>
+                </div>
+
+                <!-- Autres sections -->
+                <div id="favorites" class="section" style="display:none;">
+                    <!-- Contenu pour les recettes favorites -->
+                </div>
+
+                <div id="mylist" class="section" style="display:none;">
+                    <!-- Contenu pour la liste de courses -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
