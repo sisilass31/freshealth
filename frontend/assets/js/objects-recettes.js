@@ -1,5 +1,13 @@
 const recettes = [
     {
+        titre: "Riz au Poulet et ses Légumes arc en ciel",
+        image: "../assets/images/riz-poulet.png",
+        description: "Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les papilles. Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!",
+        like: 0,
+        categorie: "recettes salées",
+        video: "https://www.youtube.com/watch?v=exemple1"
+    },
+    {
         titre: "Spaghetti Carbonara",
         image: "../assets/images/carbonara.jpg",
         description: "Une délicieuse recette italienne de spaghetti à la carbonara.",
