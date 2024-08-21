@@ -11,7 +11,7 @@
 }
 
 .popUp {
-    margin: auto; /*Cette propriété indique que les marges gauche et droite doivent être automatiquement calculées de manière égale. Cela centre l'élément horizontalement au milieu de son conteneur parent. Pour que cela fonctionne correctement, l'élément doit avoir une largeur définie (comme avec max-width).*/
+    margin:  20px auto; /*Cette propriété indique que les marges gauche et droite doivent être automatiquement calculées de manière égale. Cela centre l'élément horizontalement au milieu de son conteneur parent. Pour que cela fonctionne correctement, l'élément doit avoir une largeur définie (comme avec max-width).*/
     max-width: 1200px; /* Cela signifie que l'élément ne s'étendra jamais au-delà de cette largeur, même si l'écran est plus large. Si l'écran est plus petit que 1200px, l'élément s'adaptera à la largeur disponible, tout en restant centré grâce à margin: auto. */
 }
 
@@ -20,7 +20,7 @@
 .titrerecettePopUp h6 {
    color: #919191; 
    font-weight: normal; /*Spécifie l'épaisseur du texte. normal signifie que le texte aura un poids de police standard (ni gras, ni léger).*/
-   padding: 15px 0; /* Ajoute un espacement intérieur (padding) de 15px en haut et en bas de l'élément, et 0px sur les côtés gauche et droit. Cet espacement crée de l'air autour du contenu à l'intérieur de l'élément. */
+   /* padding: 15px 0; */ /* Ajoute un espacement intérieur (padding) de 15px en haut et en bas de l'élément, et 0px sur les côtés gauche et droit. Cet espacement crée de l'air autour du contenu à l'intérieur de l'élément. */
 }
 
 .titrerecettePopUp p {
@@ -58,7 +58,7 @@
 
 .background-image {
     width: 100%; /* Largeur de l'image à 100% de la largeur de la fenêtre */
-    height: 95%;  /* Hauteur de l'image à 95% de la hauteur de la fenêtre */
+    height: 100%;  /* Hauteur de l'image à 95% de la hauteur de la fenêtre */
     object-fit: cover; /* Largeur de l'image à 100% de la largeur de la fenêtre */
 }
 
@@ -180,7 +180,7 @@
 .cardPopUp{
     transition: transform 0.5s ease; /* Définit une transition fluide pour les transformations avec une durée de 0.5 seconde et une courbe de transition douce. */
     margin-top: 30px; /* Espace de 30 pixels au-dessus de l'élément */
-    margin-bottom: 60px; * Espace de 60 pixels en dessous de l'élément */
+    margin-bottom: 60px; /* Espace de 60 pixels en dessous de l'élément */
 }
 
 
@@ -188,16 +188,21 @@
 
 .ajouter-course-PopUp {
     border-color: #8DBE4C ; 
-    background-color:#8DBE4C;
-    padding: 2px;
-    
+    background: var(--gradient);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
 }
 
-.step-containerPopUp {
+.ajouter-course-PopUp:active {
+   color: #f4f4f4
+}
+
+.etapes-popup {
   display: flex;
   gap: 40px;
   align-items: center;
-  padding: 20px;
   border-radius: 6px;
  
 }
@@ -211,23 +216,48 @@
     
 }
 
+.step-containerPopUp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .step-description-PopUp {
     font-size: 1em; /* Taille du texte descriptif */
     line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
 }
 
 .preparationPopUp h2 {
-    padding: 35px 0;
+    padding: 13px 0;
 }
 
   /* !!!!!!!TABLEAU !!!!!!! */
 
+
+
+/*!!!!! RESPONSIVE !!!!! */
+
+
+@media screen and (max-width: 550px){
+    .recettePopUp {
+       flex-direction: column;
+    }
+    .popUp {
+        padding: 0 20px;
+    }
+}
+/* FIN POP UP */
+
+/*FIN RECETTE*/
+
+
+
+
+
+/* TABLEAU 
+
 .time-table {
-    margin: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;  /* Masque le contenu qui dépasse le conteneur */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre portée */
+    border-radius: 50px;
     
 }
 
@@ -236,12 +266,10 @@
     color: black;
     padding: 10px;
     margin: 0; /* utilisée pour créer un espace extérieur autour des éléments, en les séparant des autres éléments ou des bords de leur conteneur. Elle définit l'espace entre l'extérieur de la bordure d'un élément et les éléments voisins ou le bord de la page.*/
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    
-}
+   /*  text-align: center; */
+/* } */
 
-table {
+/* table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -258,8 +286,4 @@ tbody td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: center;
-}
-
-/* FIN POP UP */
-
-/*FIN RECETTE*/
+} */ 
