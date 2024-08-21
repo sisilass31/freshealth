@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/recettes.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- boxicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- title -->
@@ -20,45 +21,132 @@
     <div class="containerecipe">
         <section class="sectionicon">
             <h2 class="recipe">Recettes</h2>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/toutes.png" alt="">Toutes</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/salés.png" alt="">Salés</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/sucrés.png" alt="">Sucrés</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/petit-dej.png" alt="">Petit-dej</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/veggy.png" alt="">Veggy</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/snacks.png" alt="">Snacks</i>
-            <i href="http://"><img class="iconrecipe" src="/frontend/assets/images/boisson.png" alt="">Boissons</i>
+            <div class="diviconrecipe">
+                <a href="http://" class="aiconrecipe"><img class="iconrecipe" src="/frontend/assets/images/toutes.png"
+                        alt="">Toutes</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe" src="/frontend/assets/images/salés.png"
+                        alt="">Salés</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe" src="/frontend/assets/images/sucrés.png"
+                        alt="">Sucrés</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe"
+                        src="/frontend/assets/images/petit-dej.png" alt="">Petit-dej</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe" src="/frontend/assets/images/veggy.png"
+                        alt="">Veggy</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe" src="/frontend/assets/images/snacks.png"
+                        alt="">Snacks</a>
+                <a class="aiconrecipe" href="http://"><img class="iconrecipe" src="/frontend/assets/images/boisson.png"
+                        alt="">Boissons</a>
+            </div>
         </section>
+        <!-- LES CARDS -->
         <section class="sectionrecipe">
             <div class="cardrecipe">
                 <article>
                     <img class="imgrecipe" src="/frontend/assets/images/riz-poulet.png" alt="">
                     <div class="blockcard">
-                        <h3>Riz au Poulet et ses Légumes arc en ciel</h3>
+                        <h3 class="titlerecipe">Riz au Poulet et ses Légumes arc en ciel</h3>
                         <p> Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les papilles.
-                            Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant !</p>
-                        <i class='bx bxs-heart'></i>
-                        <button>Voir plus</button>
+                            Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!</p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
                     </div>
                 </article>
                 <article>
                     <img class="imgrecipe" src="/frontend/assets/images/salade-fruit.png" alt="">
                     <div class="blockcard">
-                        <h3>Salade Éclatante de Fruits Bien-Être</h3>
+                        <h3 class="titlerecipe">Salade Éclatante de Fruits Bien-Être</h3>
                         <p> Savourez notre "Salade Éclatante de Fruits Bien-Être", un mélange rafraîchissant de fruits
                             frais, riches en vitamines et antioxydants. Cette salade colorée ...</p>
-                        <i class='bx bxs-heart'></i>
-                        <button>Voir plus</button>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/smoothie-rose-fruits-baies_1262893-869-removebg-preview.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">Verre Énergie : Smoothie Vitalité</h3>
+                        <p>Découvrez notre "Verre Énergie : Smoothie Vitalité", un mélange délicieux de fruits frais et de nutriments essentiels, présenté dans une élégante bouteille en verre.</p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/pngtree-healthy-fruit-and-nut-snack-plate-png-image_13241195-removebg-preview.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">En-cas Vitalité : Fruits et Noix</h3>
+                        <p>une collation saine et gourmande alliant des fruits frais et des noix croquantes. Idéal pour une pause énergétique tout au long de la journée ...
+                        </p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/poele-de-legume.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">Poêlée Gourmande de Légumes Sautés</h3>
+                        <p> Craquez pour notre "Poêlée Gourmande de Légumes Sautés", un mélange coloré et savoureux de
+                            légumes frais, cuits à la perfection pour préserver leurs ...
+                        </p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/oeuf-boeuf-salade.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">Bol Énergie : Bœuf, Œuf et Salade de Carottes</h3>
+                        <p>Ce plat équilibré et nutritif est parfait pour un repas sain et rassasiant, qui soutient
+                            votre vitalité tout en régalant vos papilles. Cliquez pour découvrir ...</p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/salade-de-fruits-dhier.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">Salade de Fruits Revigorante d'Hiver</h3>
+                        <p>Idéale pour une collation saine et énergisante, cette salade colorée apporte fraîcheur et
+                            bien-être pendant les mois froids. Cliquez pour ...
+                        </p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
+                </article>
+                <article>
+                    <img class="imgrecipe" src="/frontend/assets/images/ideespetitdejsain-1-2-removebg-preview-removebg-preview.png" alt="">
+                    <div class="blockcard">
+                        <h3 class="titlerecipe">Bol Matinal : Porridge Revitalisant</h3>
+                        <p>Ce porridge, plein de fibres et de bienfaits, est parfait pour commencer la journée avec énergie et équilibre. Cliquez pour découvrir un bol réconfortant ...</p>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
                     </div>
                 </article>
                 <article>
                     <img class="imgrecipe" src="/frontend/assets/images/saumon-riz.png" alt="">
                     <div class="blockcard">
-                        <h3>Assiette Équilibre : Saumon, Riz et Salade Croquante</h3>
-                        <p> Ce plat équilibré et nutritif est parfait pour un repas sain, alliant saveur, légèreté et
-                            bien-être. Cliquez pour découvrir une option délicieuse qui nourrit le corps et l'esprit !
+                        <h3 class="titlerecipe">L'Équilibre : Saumon, Riz et Salade Croquante</h3>
+                        <p> Ce plat équilibré et nutritif est parfait pour un repas sain, alliant
+                            saveur, légèreté et
+                            bien-être. Cliquez pour découvrir une option délicieuse qui nourrit ...
                         </p>
-                        <i class='bx bxs-heart'></i>
-                        <button>Voir plus</button>
+                        <div class="cardlovevoirplus">
+                            <i id="love" class='bx bxs-heart'></i>
+                            <button class="buttonrecipevoirplus">Voir plus</button>
+                        </div>
                     </div>
                 </article>
             </div>
