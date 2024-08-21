@@ -62,6 +62,10 @@ ul li {
   cursor: pointer;
 }
 
+h1 {
+  font-weight: 400;
+  font-size: 30px;
+}
 /*general*/
 
 /*début navbar*/
@@ -241,10 +245,6 @@ ul li {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.title-contact h1 {
-  font-weight: 400;
 }
 
 .title-contact p {
@@ -476,7 +476,6 @@ footer svg {
     box-sizing: border-box;
   }
   .side_bar a {
-    padding: 10px 0;
     text-decoration: none;
     font-size: 20px;
     color: var(--white);
@@ -518,20 +517,27 @@ footer svg {
     color: var(--white);
     text-decoration: none;
     position: absolute;
-    top: 5px;
-    right: 50px;
+    top: 15px;
+    right: 30px;
     transition: 0.3s;
   }
   .side_ul {
     padding: 0;
     margin: 0;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   .membre,
   .botton_sidebar,
   .icon_sidebar,
   .reseaux_sidebar {
-    margin-top: 20px;
+    display: flex;
+    margin: 20px 0;
+  }
+  .icon_sidebar {
+    flex-direction: column;
+    gap: 15px;
   }
   .reseaux_sidebar {
     display: flex;
@@ -558,6 +564,21 @@ footer svg {
   .btn-rejoindre {
     background-color: var(--white);
     color: var(--darkgreen);
+  }
+  .button_sidebar {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn-rejoindre.btn-sidebar {
+    color: var(--darkgreen);
+  }
+  .btn-sidebar a {
+    padding: 0;
+  }
+  .button_sidebar a {
+    font-size: 16px !important;
   }
   .btn-identifier {
     background-color: transparent;
