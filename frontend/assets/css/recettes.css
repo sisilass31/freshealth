@@ -26,7 +26,7 @@
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--background);
   border: 1px solid #888;
   width: 80%;
   max-width: 800px;
@@ -216,38 +216,41 @@
 .ingredients-popup {
   display: flex;
   flex-wrap: wrap;
-  gap: 150px;
-  justify-content: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 18px;
   align-items: center;
 }
 
 .ingredients-popup div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 150px;
   text-align: center;
-  background: var(--white);
+  background-color: var(--white);
   border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 12px;
 }
 
 .ingredients-popup img {
-  width: 100px;
-  height: 100px;
+  width: 118px;
+  height: 75px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .cardPopUp {
   transition: transform 0.5s ease;
-  margin-top: 30px;
-  margin-bottom: 60px;
 }
 
 .ajouter-course-PopUp {
+  font-size: 12px;
+  border-radius: 6px;
   border-color: #8dbe4c;
   background: var(--gradient);
   border: none;
-  padding: 5px;
+  padding: 6px;
   cursor: pointer;
   color: var(--white);
 }
@@ -468,8 +471,18 @@ tbody td {
   .titre-recipe-filtre {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     width: 100%;
     padding: 0 20px;
   }
+  .ingredients-popup {
+    justify-content: start;
+  }
+  .diviconrecipe {
+    display: none;
+  }
+  .cardrecipe {
+    margin: 0px auto !important;
+    }
 }
