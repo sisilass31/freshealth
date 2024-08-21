@@ -225,34 +225,8 @@ ul li {
 /*fin navbar*/
 
 /*début accueil*/
-.faq-item {
-  margin-bottom: 15px;
-}
 
-.faq-question {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-}
 
-.faq-answer {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.arrow {
-  margin-left: auto;
-  transition: transform 0.3s ease;
-}
-
-.arrow.rotated {
-  transform: rotate(90deg);
-}
 
 /*fin accueil*/
 
@@ -402,6 +376,7 @@ ul li {
 /*fin contact*/
 
 /*debut footer*/
+
 footer svg {
   display: block;
 }
@@ -516,6 +491,24 @@ footer svg {
   .side_content {
     padding: 30px;
   }
+  /*searchbar sidebar*/
+  .searchbar form {
+    background-color: var(--white);
+    padding: 8px;
+    border-radius: 5px;
+    width: 200px;
+    display: flex;
+    font-size: 20px;
+  }
+  .searchbar input {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+  .searchbar form i {
+    color: var(--green);
+  }
+  /*searchbar sidebar*/
   .side_link {
     margin-top: 50px;
   }
