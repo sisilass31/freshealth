@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,200 @@
     <!-- title -->
     <title>Home - Freshealth</title>
 </head>
+
 <body>
+    <header class="background-accueil">
+        <nav>
+            <div class="navbar-container">
+                <!-- navbar -->
+                <div class="logo">
+                    <a href="../index.html"><img src="./assets/images/logo.png" alt="freshealth"></a>
+                </div>
+                <div class="navbar-links" id="navbar-links">
+                    <a href="./pages/recettes.html">Recettes</a>
+                    <a href="#">Conseils</a>
+                    <a href="#">Organisation</a>
+                    <a href="./pages/contact.html">Contact</a>
+                </div>
+                <!-- navbar -->
+                <div class="search-user">
+                    <!-- searchbar -->
+                    <div class="search">
+                        <i class='bx bx-search-alt-2'></i>
+                    </div>
+                    <!-- searchbar -->
+
+                    <!-- account -->
+                    <div class="user">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <!-- account -->
+                </div>
+                <!-- Toggle Button -->
+                <div class="toggle-button" onclick="toggleSidebar()">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </div>
+        </nav>
+        <div class="titre-accueil">
+            <h1 class="welcome-titre">Bienvenue sur Freashealth</h1>
+            <p class="desc-titre-accueil">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore.</p>
+            <button class="button-primary">Lorem ipsum</button>
+        </div>
+        <!--sidebar-->
+        <div id="popup_sidebar" class="overlay_sidebar">
+            <div class="box_sidebar">
+                <div class="side_bar">
+                    <div class="side_content">
+                        <div class="close_botton">
+                            <a class="close" href="#" onclick="toggleSidebar()">&times;</a>
+                        </div>
+                        <div class="side_link">
+                            <ul class="side_ul">
+                                <li><a href="./pages/recettes.html" class="nav-link">Recettes</a></li>
+                                <li><a href="./pages/conseils.html" class="nav-link">Conseils</a></li>
+                                <li><a href="./pages/organisation.html" class="nav-link">Organisation</a></li>
+                                <li><a href="./pages/contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="membre">
+                            <p>Devenez membre pour accéder au meilleur des produits.</p>
+                        </div>
+                        <div class="botton_sidebar">
+                            <div class="botton_sidebar2">
+                                <a href="../html/inscrire.html">
+                                    <button type="button" class="btn-rejoindre btn-sidebar">Nous rejoindre</button>
+                                </a>
+                            </div>
+                            <div class="botton_sidebar3">
+                                <a href="../html/se-connecter.html">
+                                    <button type="button" class="btn-identifier btn-sidebar">s'identifier</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="icon_sidebar">
+                            <a href="./profile.html">
+                                <div class="settings-logout">
+                                    <i class='bx bx-cog'></i>
+                                    <p>Paramètres</p>
+                                </div>
+                            </a>
+                            <a href="../html/commande.html">
+                                <div class="settings-logout">
+                                    <i class='bx bx-log-out bx-rotate-180'></i>
+                                    <p>Log out</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="reseaux_sidebar">
+                            <a href="#">
+                                <div class="sociaux">
+                                    <i class='bx bxl-twitter'></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="sociaux">
+                                    <i class='bx bxl-instagram'></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="sociaux">
+                                    <i class='bx bxl-facebook'></i>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="sociaux">
+                                    <i class='bx bxl-tiktok'></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--sidebar-->
+    </header>
     <!-- contenu accueil -->
     <main>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Quelle est la politique de retour ?</span>
+                <box-icon name='arrow-back' class="arrow"></box-icon>
+            </div>
+            <div class="faq-answer">
+                <p>Vous pouvez retourner les articles dans un délai de 30 jours à compter de la date d'achat. Les
+                    articles doivent être en bon état et dans leur emballage d'origine.</p>
+            </div>
+        </div>
 
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Comment puis-je suivre ma commande ?</span>
+                <box-icon name='arrow-back' class="arrow"></box-icon>
+            </div>
+            <div class="faq-answer">
+                <p>Vous pouvez suivre votre commande en utilisant le numéro de suivi fourni dans l'email de confirmation
+                    d'expédition. Rendez-vous sur notre site web pour entrer le numéro et voir le statut de votre
+                    commande.</p>
+            </div>
+        </div>
     </main>
+    <footer>
+        <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <path style="transform:translate(0, 0px); opacity:1" fill="rgba(141, 190, 76, 1)"
+                d="M0,40L48,45C96,50,192,60,288,53.3C384,47,480,23,576,18.3C672,13,768,27,864,35C960,43,1056,47,1152,41.7C1248,37,1344,23,1440,23.3C1536,23,1632,37,1728,50C1824,63,1920,77,2016,83.3C2112,90,2208,90,2304,88.3C2400,87,2496,83,2592,68.3C2688,53,2784,27,2880,18.3C2976,10,3072,20,3168,35C3264,50,3360,70,3456,71.7C3552,73,3648,57,3744,48.3C3840,40,3936,40,4032,35C4128,30,4224,20,4320,13.3C4416,7,4512,3,4608,1.7C4704,0,4800,0,4896,10C4992,20,5088,40,5184,45C5280,50,5376,40,5472,43.3C5568,47,5664,63,5760,70C5856,77,5952,73,6048,71.7C6144,70,6240,70,6336,63.3C6432,57,6528,43,6624,40C6720,37,6816,43,6864,46.7L6912,50L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z">
+            </path>
+        </svg>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-links-container">
+                    <div class="footer-links">
+                        <div class="titre-footer">
+                            <h4 class="">Freshealth</h4>
+                        </div>
+                        <ul class="logo-footer footer-list">
+                            <li>Bienvenue chez Freshealth ! Votre choix pour une alimentation saine et savoureuse.</li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <div class="titre-footer">
+                            <h4 class="">À propos</h4>
+                        </div>
+                        <ul class="info-footer footer-list">
+                            <li>Politique de confidentialité</li>
+                            <li>Conditions d'utilisation</li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <div class="titre-footer">
+                            <h4 class="">Nos contacts</h4>
+                        </div>
+                        <ul class="info-footer footer-list">
+                            <li>Contact@freashealth.com</li>
+                            <li>+33 7 23 45 67 89</li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <div class="titre-footer">
+                            <h4 class="">Rejoignez nous</h4>
+                        </div>
+                        <ul class="social-links footer-list">
+                            <li><i class='bx bxl-twitter'></i></li>
+                            <li><i class='bx bxl-instagram'></i></li>
+                            <li><i class='bx bxl-facebook'></i></li>
+                            <li><i class='bx bxl-tiktok'></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2024 Freashealth. Tous droits réservés. Création de Soumaya, Syrine, Nacera, et Sihem.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

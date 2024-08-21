@@ -2,28 +2,31 @@
 
 /* recettes */
 
-/* darkmode */
+/* navbar */
 
-// Récupère les éléments
-const checkbox = document.getElementById('switch');
+function toggleSidebar() {
+    var sidebar = document.getElementById('popup_sidebar');
+    sidebar.classList.toggle('active');
+}
 
-// Vérifie l'état du mode sombre dans le stockage local et applique le thème
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        checkbox.checked = true;
-    }
+/* navbar */
+
+/* FAQ */
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.arrow');
+
+        // Toggle the answer's visibility
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            arrow.classList.remove('rotated');
+        } else {
+            answer.style.display = 'block';
+            arrow.classList.add('rotated');
+        }
+    });
 });
 
-// Bascule le mode sombre lorsque l'utilisateur clique sur l'interrupteur
-checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'true');
-    } else {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'false');
-    }
-});
-
-/* darkmode */
+/* FAQ */
