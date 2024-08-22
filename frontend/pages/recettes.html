@@ -139,7 +139,12 @@
     <main>
         <div class="containerecipe">
             <section class="sectionicon">
-                <h1 class="recipe">Recettes</h1>
+                <div class="titre-recipe-filtre">
+                    <h1 class="recipe">Recettes</h1>
+                    <div class="filtres-recipes">
+                        <button>Filtres</button>
+                    </div>
+                </div>
                 <div class="diviconrecipe">
                     <a href="http://" class="aiconrecipe"><img class="iconrecipe"
                             src="/frontend/assets/images/toutes.png" alt="">Toutes</a>
@@ -283,163 +288,178 @@
                 </div>
             </section>
         </div>
-            <!-- !!!!!!!!!!!!!!!!!! SYRINE POP UP !!!!!!!!!!!!!!!-->
-    <div class="popUpComplet">
-        <!--  !!!VIDEO!!! -->
-        <div class="video-container">
-            <input type="checkbox" id="playVideo" class="play-checkbox">
-            <label for="playVideo" class="video-label">
-                <img src="../assets/images/fond pain bagel.png" alt="Image de fond" class="background-image">
-                <div class="play-button">&#9658;</div> <!-- Bouton Play personnalisé -->
-            </label>
-            <video class="video" controls>
-                <source src="../assets/videos/Recette Bagel.mp4" type="video/mp4">
-            </video>
+        <!-- !!!!!!!!!!!!!!!!!! SYRINE POP UP !!!!!!!!!!!!!!!-->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-popup"><i class='bx bx-x'></i></span>
+                <!-- Insérez ici le contenu du pop-up complet -->
+                <div class="popUpComplet">
+                    <!--  !!!VIDEO!!! -->
+                    <div class="video-container">
+                        <input type="checkbox" id="playVideo" class="play-checkbox">
+                        <label for="playVideo" class="video-label">
+                            <div class="image-video">
+                                <img src="../assets/images/fond-pain-bagel.png" alt="Image de fond" class="background-image">
+                                <video class="video" controls>
+                                    <source src="../assets/videos/Recette-Bagel.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="play-button"><i class='bx bx-play'></i></div> <!-- Bouton Play personnalisé -->
+                        </label>
+                    </div>
+                    
+                    <!--  <video class="background-video-PopUp" src="../assets/videos/Recette Bagel.mp4" controls autoplay loop muted>p
+                </video> -->
+
+                    <div class="popUp">
+                        <!--  !!! BLOC TITRE DE LA RECETTE !!! -->
+
+                        <section class="titrerecettePopUp">
+
+                            <div class="recettePopUp">
+
+                                <div class="titrePopUp">
+                                    <h2>Bagel au saumon </h2>
+                                    <h6>Mots clés : Saumon, concombre, bagel</h6>
+                                </div>
+
+                                <div class="iconePopUp">
+                                    <button class="icon-button">
+                                        <i class='bx bxs-heart'></i> Likes
+                                    </button>
+                                    <button class="icon-button">
+                                        <i class='bx bxs-share'></i> Partage
+                                    </button>
+                                    <button class="icon-button">
+                                        <i class='bx bx-plus'></i> Ma liste
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <p>
+                                Le bagel au saumon est un sandwich élégant alliant un pain bagel moelleux, du saumon
+                                fumé
+                                fondant,
+                                et du fromage frais crémeux relevé par une touche de citron et d’aneth. Parfait pour une
+                                pause
+                                gourmande et raffinée.</p>
+
+                        </section>
+
+                        <!-- !!! BLOC INGREDIENTS !!! -->
+
+                        <section class="titre-ingredients-Popup">
+                            <h2>Ingrédients</h2>
+                            <div class="ingredients-popup">
+
+                                <div class="cardPopUp">
+                                    <img src="../assets/images/Image Indrégients/pain bagel.jpeg">
+                                    <p>Pain Bagel</p>
+                                    <button class="ajouter-course-PopUp"> Ajouter aux courses </button>
+                                </div>
+
+                                <div class="cardPopUp"><img
+                                        src="../assets/images/Image Indrégients/fromage frais.jpeg">
+                                    <p> Fromage frais </p>
+                                    <button class="ajouter-course-PopUp">Ajouter aux courses </button>
+                                </div>
+
+                                <div class="cardPopUp"><img src="../assets/images/Image Indrégients/mache.jpeg">
+                                    <p>Mâche</p>
+                                    <button class="ajouter-course-PopUp">Ajouter aux courses </button>
+                                </div>
+
+                                <div class="cardPopUp"><img src="../assets/images/Image Indrégients/saumon fumé.jpeg">
+                                    <p>Saumon fumé</p>
+                                    <button class="ajouter-course-PopUp">Ajouter aux courses </button>
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                        <!--      <div class="time-table">
+                        <h2>Temps Total</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Préparation</th>
+                                    <th>Cuisson</th>
+                                    <th>Repos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15 min</td>
+                                    <td>45 min</td>
+                                    <td>30 min</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                        <!--  !!! BLOC ETAPES DE PREPARATION !!! -->
+
+                        <section class="preparationPopUp">
+
+                            <h2>Étapes de Préparation</h2>
+
+                            <div class="step-containerPopUp">
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">1</div>
+                                    <div class="step-description-PopUp">Couper les bagels en 2 et les placer dans le
+                                        grille pain
+                                        (ou les
+                                        toaster au four).
+                                    </div>
+                                </div>
+
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">2</div>
+                                    <div class="step-description-PopUp"> Étalez généreusement le fromage frais sur la
+                                        moitié
+                                        inférieure
+                                        de chaque bagel.
+                                    </div>
+                                </div>
+
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">3</div>
+                                    <div class="step-description-PopUp">Disposez ensuite les tranches de saumon fumé
+                                        par-dessus
+                                        le
+                                        fromage frais.
+                                    </div>
+                                </div>
+
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">4</div>
+                                    <div class="step-description-PopUp">Ajoutez quelques feuilles de mâche sur le
+                                        saumon.
+                                    </div>
+                                </div>
+
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">5</div>
+                                    <div class="step-description-PopUp">Recouvrez avec la moitié supérieure des bagels.
+                                    </div>
+                                </div>
+
+                                <div class="etapes-popup">
+                                    <div class="step-number-PopUp">6</div>
+                                    <div class="step-description-PopUp"> Servez immédiatement pour profiter du croquant
+                                        des
+                                        bagels
+                                        grillés et de la fraîcheur des ingrédients !
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--  <video class="background-video-PopUp" src="../assets/videos/Recette Bagel.mp4" controls autoplay loop muted>p
-        </video> -->
 
-        <div class="popUp">
-            <!--  !!! BLOC TITRE DE LA RECETTE !!! -->
-
-            <section class="titrerecettePopUp">
-
-                <div class="recettePopUp">
-
-                    <div class="titrePopUp">
-                        <h2>Bagel au saumon </h2>
-                        <h6>Mots clés : Saumon, concombre, bagel</h6>
-                    </div>
-
-                    <div class="iconePopUp">
-                        <button class="icon-button">
-                            <i class='bx bxs-heart'></i> Likes
-                        </button>
-                        <button class="icon-button">
-                            <i class='bx bxs-share'></i> Partage
-                        </button>
-                        <button class="icon-button">
-                            <i class='bx bx-plus'></i> Ma liste
-                        </button>
-                    </div>
-
-                </div>
-
-                <p>
-                    Le bagel au saumon est un sandwich élégant alliant un pain bagel moelleux, du saumon fumé fondant,
-                    et du fromage frais crémeux relevé par une touche de citron et d’aneth. Parfait pour une pause
-                    gourmande et raffinée.</p>
-
-            </section>
-
-            <!-- !!! BLOC INGREDIENTS !!! -->
-
-            <section class="titre-ingredients-Popup">
-                <h2>Ingrédients</h2>
-                <div class="ingredients-popup">
-
-                    <div class="cardPopUp">
-                        <img src="../assets/images/Image Indrégients/pain bagel.jpeg">
-                        <p>Pain Bagel</p>
-                        <button class="ajouter-course-PopUp"> Ajouter aux courses </button>
-                    </div>
-
-                    <div class="cardPopUp"><img src="../assets/images/Image Indrégients/fromage frais.jpeg"> 
-                       <p> Fromage frais </p>
-                        <button class="ajouter-course-PopUp">Ajouter aux courses </button>
-                    </div>
-
-                    <div class="cardPopUp"><img src="../assets/images/Image Indrégients/mache.jpeg">
-                        <p>Mâche</p>
-                        <button class="ajouter-course-PopUp">Ajouter aux courses </button>
-                    </div>
-
-                    <div class="cardPopUp"><img src="../assets/images/Image Indrégients/saumon fumé.jpeg"> 
-                        <p>Saumon fumé</p>
-                        <button class="ajouter-course-PopUp">Ajouter aux courses </button>
-                    </div>
-
-
-                </div>
-            </section>
-
-
-       <!--      <div class="time-table">
-                <h2>Temps Total</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Préparation</th>
-                            <th>Cuisson</th>
-                            <th>Repos</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>15 min</td>
-                            <td>45 min</td>
-                            <td>30 min</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
-
-
-
-            <!--  !!! BLOC ETAPES DE PREPARATION !!! -->
-
-            <section class="preparationPopUp">
-
-                <h2>Étapes de Préparation</h2>
-
-                <div class="step-containerPopUp">
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">1</div>
-                        <div class="step-description-PopUp">Couper les bagels en 2 et les placer dans le grille pain (ou les
-                            toaster au four).
-                        </div>
-                    </div>
-    
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">2</div>
-                        <div class="step-description-PopUp"> Étalez généreusement le fromage frais sur la moitié inférieure
-                            de chaque bagel.
-                        </div>
-                    </div>
-    
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">3</div>
-                        <div class="step-description-PopUp">Disposez ensuite les tranches de saumon fumé par-dessus le
-                            fromage frais.
-                        </div>
-                    </div>
-    
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">4</div>
-                        <div class="step-description-PopUp">Ajoutez quelques feuilles de mâche sur le saumon.
-                        </div>
-                    </div>
-    
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">5</div>
-                        <div class="step-description-PopUp">Recouvrez avec la moitié supérieure des bagels.
-                        </div>
-                    </div>
-    
-                    <div class="etapes-popup">
-                        <div class="step-number-PopUp">6</div>
-                        <div class="step-description-PopUp"> Servez immédiatement pour profiter du croquant des bagels
-                            grillés et de la fraîcheur des ingrédients !
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-
-        </div>
-    </div>
         <!-- on va faire un js qui permet de créer une carte recette à partir de tous les objets de la page objects-recettes puis de faire des boutons "filtres" -->
     </main>
     <footer>
