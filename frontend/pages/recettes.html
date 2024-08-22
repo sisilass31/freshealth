@@ -145,313 +145,133 @@
                         <button>Filtres</button>
                     </div>
                 </div>
-                <div class="diviconrecipe">
-                    <a href="http://" class="aiconrecipe"><img class="iconrecipe"
-                            src="/frontend/assets/images/toutes.png" alt="">Toutes</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/salés.png" alt="">Salés</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/sucrés.png" alt="">Sucrés</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/petit-dej.png" alt="">Petit-dej</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/veggy.png" alt="">Veggy</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/snacks.png" alt="">Snacks</a>
-                    <a class="aiconrecipe" href="http://"><img class="iconrecipe"
-                            src="/frontend/assets/images/boisson.png" alt="">Boissons</a>
-                </div>
             </section>
-            <!-- LES CARDS -->
+            <div class="filter-container">
+                <button onclick="filterArticles('All')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/toutes.png" alt="Toutes">
+                    <p>Toutes</p>
+                </button>
+                <button onclick="filterArticles('Salés')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/salés.png" alt="Salés">
+                    <p>Salés</p>
+                </button>
+                <button onclick="filterArticles('Sucrés')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/sucrés.png" alt="Sucrés">
+                    <p>Sucrés</p>
+                </button>
+                <button onclick="filterArticles('Petit-dej')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/petit-dej.png" alt="Petit-dej">
+                    <p>Petit-dej</p>
+                </button>
+                <button onclick="filterArticles('Veggy')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/veggy.png" alt="Veggy">
+                    <p>Veggy</p>
+                </button>
+                <button onclick="filterArticles('Snacks')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/snacks.png" alt="Snacks">
+                    <p>Snacks</p>
+                </button>
+                <button onclick="filterArticles('Boissons')" class="aiconrecipe">
+                    <img class="iconrecipe" src="/frontend/assets/images/boisson.png" alt="Boissons">
+                    <p>Boissons</p>
+                </button>
+                
+            </div>
             <section class="sectionrecipe">
-                <div class="cardrecipe">
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/riz-poulet.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Riz au Poulet et ses Légumes arc en ciel</h3>
-                            <p> Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les
-                                papilles.
-                                Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!</p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/salade-fruit.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Salade Éclatante de Fruits Bien-Être</h3>
-                            <p> Savourez notre "Salade Éclatante de Fruits Bien-Être", un mélange rafraîchissant de
-                                fruits
-                                frais, riches en vitamines et antioxydants. Cette salade colorée ...</p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe"
-                            src="/frontend/assets/images/smoothie-rose-fruits-baies_1262893-869-removebg-preview.png"
-                            alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Verre Énergie : Smoothie Vitalité</h3>
-                            <p>Découvrez notre "Verre Énergie : Smoothie Vitalité", un mélange délicieux de fruits frais
-                                et de nutriments essentiels, présenté dans une élégante bouteille en verre.</p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe"
-                            src="/frontend/assets/images/pngtree-healthy-fruit-and-nut-snack-plate-png-image_13241195-removebg-preview.png"
-                            alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">En-cas Vitalité : Fruits et Noix</h3>
-                            <p>une collation saine et gourmande alliant des fruits frais et des noix croquantes. Idéal
-                                pour une pause énergétique tout au long de la journée ...
-                            </p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/poele-de-legume.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Poêlée Gourmande de Légumes Sautés</h3>
-                            <p> Craquez pour notre "Poêlée Gourmande de Légumes Sautés", un mélange coloré et savoureux
-                                de
-                                légumes frais, cuits à la perfection pour préserver leurs ...
-                            </p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/oeuf-boeuf-salade.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Bol Énergie : Bœuf, Œuf et Salade de Carottes</h3>
-                            <p>Ce plat équilibré et nutritif est parfait pour un repas sain et rassasiant, qui soutient
-                                votre vitalité tout en régalant vos papilles. Cliquez pour découvrir ...</p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/salade-de-fruits-dhier.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Salade de Fruits Revigorante d'Hiver</h3>
-                            <p>Idéale pour une collation saine et énergisante, cette salade colorée apporte fraîcheur et
-                                bien-être pendant les mois froids. Cliquez pour ...
-                            </p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe"
-                            src="/frontend/assets/images/ideespetitdejsain-1-2-removebg-preview-removebg-preview.png"
-                            alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">Bol Matinal : Porridge Revitalisant</h3>
-                            <p>Ce porridge, plein de fibres et de bienfaits, est parfait pour commencer la journée avec
-                                énergie et équilibre. Cliquez pour découvrir un bol réconfortant ...</p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <img class="imgrecipe" src="/frontend/assets/images/saumon-riz.png" alt="">
-                        <div class="blockcard">
-                            <h3 class="titlerecipe">L'Équilibre : Saumon, Riz et Salade Croquante</h3>
-                            <p> Ce plat équilibré et nutritif est parfait pour un repas sain, alliant
-                                saveur, légèreté et
-                                bien-être. Cliquez pour découvrir une option délicieuse qui nourrit ...
-                            </p>
-                            <div class="cardlovevoirplus">
-                                <i id="love" class='bx bxs-heart'></i>
-                                <button class="buttonrecipevoirplus">Voir plus</button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                <div class="cardrecipe"></div>
             </section>
         </div>
-        <!-- !!!!!!!!!!!!!!!!!! SYRINE POP UP !!!!!!!!!!!!!!!-->
+
+        <!-- Modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close-popup"><i class='bx bx-x'></i></span>
-                <!-- Insérez ici le contenu du pop-up complet -->
                 <div class="popUpComplet">
-                    <!--  !!!VIDEO!!! -->
                     <div class="video-container">
                         <input type="checkbox" id="playVideo" class="play-checkbox">
                         <label for="playVideo" class="video-label">
                             <div class="image-video">
-                                <img src="../assets/images/fond-pain-bagel.png" alt="Image de fond" class="background-image">
+                                <img src="../assets/images/fond-pain-bagel.png" alt="Image de fond"
+                                    class="background-image">
                                 <video class="video" controls>
-                                    <source src="../assets/videos/Recette-Bagel.mp4" type="video/mp4">
+                                    <source src="" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="play-button"><i class='bx bx-play'></i></div> <!-- Bouton Play personnalisé -->
+                            <div class="play-button"><i class='bx bx-play'></i></div>
                         </label>
                     </div>
-                    
-                    <!--  <video class="background-video-PopUp" src="../assets/videos/Recette Bagel.mp4" controls autoplay loop muted>p
-                </video> -->
-
                     <div class="popUp">
-                        <!--  !!! BLOC TITRE DE LA RECETTE !!! -->
-
                         <section class="titrerecettePopUp">
-
                             <div class="recettePopUp">
-
                                 <div class="titrePopUp">
-                                    <h2>Bagel au saumon </h2>
-                                    <h6>Mots clés : Saumon, concombre, bagel</h6>
+                                    <h2></h2>
+                                    <h6></h6>
                                 </div>
-
                                 <div class="iconePopUp">
-                                    <button class="icon-button">
-                                        <i class='bx bxs-heart'></i> Likes
-                                    </button>
-                                    <button class="icon-button">
-                                        <i class='bx bxs-share'></i> Partage
-                                    </button>
-                                    <button class="icon-button">
-                                        <i class='bx bx-plus'></i> Ma liste
-                                    </button>
+                                    <button class="icon-button"><i class='bx bxs-heart'></i> Likes</button>
+                                    <button class="icon-button"><i class='bx bxs-share'></i> Partage</button>
+                                    <button class="icon-button"><i class='bx bx-plus'></i> Ma liste</button>
                                 </div>
-
                             </div>
-
-                            <p>
-                                Le bagel au saumon est un sandwich élégant alliant un pain bagel moelleux, du saumon
-                                fumé
-                                fondant,
-                                et du fromage frais crémeux relevé par une touche de citron et d’aneth. Parfait pour une
-                                pause
-                                gourmande et raffinée.</p>
-
+                            <p></p>
                         </section>
-
-                        <!-- !!! BLOC INGREDIENTS !!! -->
-
                         <section class="titre-ingredients-Popup">
                             <h2>Ingrédients</h2>
                             <div class="ingredients-popup">
-
                                 <div class="cardPopUp">
-                                    <img src="../assets/images/Image Indrégients/pain bagel.jpeg">
+                                    <img src="../assets/images/Image Indrégients/pain bagel.jpeg">
                                     <p>Pain Bagel</p>
                                     <button class="ajouter-course-PopUp"> Ajouter aux courses </button>
                                 </div>
-
-                                <div class="cardPopUp"><img
-                                        src="../assets/images/Image Indrégients/fromage frais.jpeg">
+                                <div class="cardPopUp">
+                                    <img src="../assets/images/Image Indrégients/fromage frais.jpeg">
                                     <p> Fromage frais </p>
                                     <button class="ajouter-course-PopUp">Ajouter aux courses </button>
                                 </div>
-
-                                <div class="cardPopUp"><img src="../assets/images/Image Indrégients/mache.jpeg">
+                                <div class="cardPopUp">
+                                    <img src="../assets/images/Image Indrégients/mache.jpeg">
                                     <p>Mâche</p>
                                     <button class="ajouter-course-PopUp">Ajouter aux courses </button>
                                 </div>
-
-                                <div class="cardPopUp"><img src="../assets/images/Image Indrégients/saumon fumé.jpeg">
+                                <div class="cardPopUp">
+                                    <img src="../assets/images/Image Indrégients/saumon fumé.jpeg">
                                     <p>Saumon fumé</p>
                                     <button class="ajouter-course-PopUp">Ajouter aux courses </button>
                                 </div>
-
                             </div>
                         </section>
-
-
-                        <!--      <div class="time-table">
-                        <h2>Temps Total</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Préparation</th>
-                                    <th>Cuisson</th>
-                                    <th>Repos</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15 min</td>
-                                    <td>45 min</td>
-                                    <td>30 min</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
-                        <!--  !!! BLOC ETAPES DE PREPARATION !!! -->
-
                         <section class="preparationPopUp">
-
                             <h2>Étapes de Préparation</h2>
-
                             <div class="step-containerPopUp">
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">1</div>
                                     <div class="step-description-PopUp">Couper les bagels en 2 et les placer dans le
-                                        grille pain
-                                        (ou les
-                                        toaster au four).
-                                    </div>
+                                        grille pain (ou les toaster au four).</div>
                                 </div>
-
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">2</div>
-                                    <div class="step-description-PopUp"> Étalez généreusement le fromage frais sur la
-                                        moitié
-                                        inférieure
-                                        de chaque bagel.
-                                    </div>
+                                    <div class="step-description-PopUp">Étalez généreusement le fromage frais sur la
+                                        moitié inférieure de chaque bagel.</div>
                                 </div>
-
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">3</div>
                                     <div class="step-description-PopUp">Disposez ensuite les tranches de saumon fumé
-                                        par-dessus
-                                        le
-                                        fromage frais.
-                                    </div>
+                                        par-dessus le fromage frais.</div>
                                 </div>
-
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">4</div>
                                     <div class="step-description-PopUp">Ajoutez quelques feuilles de mâche sur le
-                                        saumon.
-                                    </div>
+                                        saumon.</div>
                                 </div>
-
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">5</div>
                                     <div class="step-description-PopUp">Recouvrez avec la moitié supérieure des bagels.
                                     </div>
                                 </div>
-
                                 <div class="etapes-popup">
                                     <div class="step-number-PopUp">6</div>
-                                    <div class="step-description-PopUp"> Servez immédiatement pour profiter du croquant
-                                        des
-                                        bagels
-                                        grillés et de la fraîcheur des ingrédients !
-                                    </div>
+                                    <div class="step-description-PopUp">Servez immédiatement pour profiter du croquant
+                                        des bagels grillés et de la fraîcheur des ingrédients !</div>
                                 </div>
                             </div>
                         </section>
@@ -517,6 +337,7 @@
         </div>
     </footer>
     <script src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/recettes.js"></script>
 </body>
 
 </html>

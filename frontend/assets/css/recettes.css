@@ -47,11 +47,18 @@
 }
 
 .close-popup {
-  color: #aaa;
+  color: var(--white);
+  background-color: var(--background-dark);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
@@ -59,7 +66,7 @@
 
 .close-popup:hover,
 .close-popup:focus {
-  color: black;
+  background-color: var(--darkgreen);
   text-decoration: none;
   cursor: pointer;
 }
@@ -92,7 +99,8 @@
 }
 
 .titrePopUp h2 {
-  text-align: center;
+  text-align: start;
+  width: 335px;
 }
 
 /*VIDEO DE FOND */
@@ -342,11 +350,16 @@ tbody td {
   align-items: center;
   color: var(--black);
   gap: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   /* text-decoration: none; */
 }
-.diviconrecipe {
+.filter-container {
   display: flex;
+  justify-content: center;
   gap: 30px;
+  margin-top: 20px;
 }
 .sectionicon {
   max-width: 1200px;
@@ -363,6 +376,7 @@ tbody td {
 .filtres-recipes {
   display: none;
 }
+
 .cardrecipe {
   /* background-color: black; */
   width: 100%;
@@ -376,6 +390,7 @@ tbody td {
   gap: 50px;
   padding: auto;
 }
+
 .imgrecipe {
   width: 225px;
   height: 225px;
@@ -395,6 +410,12 @@ tbody td {
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
   padding: 90px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blockcard p {
+  height: 146.7px;
 }
 .titlerecipe {
   margin-bottom: 15px;
@@ -404,9 +425,10 @@ tbody td {
   justify-content: space-between;
   margin-top: 30px;
 }
-#love {
-  font-size: 35px;
+.cardlovevoirplus i {
+  font-size: 30px;
 }
+
 .buttonrecipevoirplus {
   cursor: pointer;
   padding: 10px 35px;
@@ -472,19 +494,20 @@ tbody td {
   .ingredients-popup {
     justify-content: start;
   }
-  .diviconrecipe {
+  .filter-container {
     display: none;
   }
   .cardrecipe {
     margin: 0px auto !important;
-    }
+  }
 }
 
 @media screen and (max-width: 910px) {
   .recettePopUp {
     flex-direction: column;
     align-items: start;
-  }.iconePopUp {
+  }
+  .iconePopUp {
     margin-top: 16px;
   }
 }
