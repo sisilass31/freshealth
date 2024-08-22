@@ -1,14 +1,76 @@
 const recettes = [
+    /* DEBUT SALEE */
+    {
+        titre: "Bagel Fraîcheur au Saumon",
+        image: "../assets/images/bagel.png",
+        description: "Parfait pour une pause gourmande et nutritive, ce bagel riche en saveurs vous offre un repas équilibré qui ravit les papilles et nourrit le corps.",
+        like: 0,
+        categorie: "recettes salées",
+        video: "../assets/videos/Recette-Bagel.mp4",
+        motsCles: "salée, saumon, bagel",
+        /*  ingredients: "dffghkjlk,rsdtfygukh",
+        preparation: "vbghjkljhgfdfghyjuikuyhgfdsfghjukilkujhgfdsfghjukilomlikujyhgfdsfghtyuio", */
+    },
     {
         titre: "Riz au Poulet et ses Légumes arc en ciel",
         image: "../assets/images/riz-poulet.png",
         description: "Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les papilles. Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!",
         like: 0,
         categorie: "recettes salées",
-        video: "https://www.youtube.com/watch?v=exemple1",
-        motsCles: "hgjkl",
-        ingredients: "dffghkjlk,rsdtfygukh",
-        preparation: "vbghjkljhgfdfghyjuikuyhgfdsfghjukilkujhgfdsfghjukilomlikujyhgfdsfghtyuio",
+        video: "../assets/videos/Riz-au-Poulet-et-ses-Légumes-arc-en-ciel.mp4",
+        motsCles: "salée, riz, poulet, legumes",
+        /* ingredients: "dffghkjlk,rsdtfygukh",
+        preparation: "vbghjkljhgfdfghyjuikuyhgfdsfghjukilkujhgfdsfghjukilomlikujyhgfdsfghtyuio", */
+    },
+    {
+        titre: "Poêlée Gourmande de Légumes Sautés",
+        image: "../assets/images/salee/poele-de-legume.png",
+        description: "Craquez pour notre Poêlée Gourmande de Légumes Sautés, un mélange coloré et savoureux de légumes frais, cuits à la perfection pour préserver leurs ...",
+        like: 0,
+        categorie: "salée, poelee, legumes",
+        video: "../assets/videos/légumes-poelee.mp4"
+    },
+    {
+        titre: "L'Équilibre : Saumon, Riz et Salade Croquante",
+        image: "../assets/images/salee/saumon-riz",
+        description: "Ce plat équilibré et nutritif est parfait pour un repas sain, alliant saveur, légèreté et bien-être. Cliquez pour découvrir une option délicieuse qui nourrit ...",
+        like: 0,
+        categorie: "salee, saumon, riz, salade",
+        video: "../assets/videos/saumon-riz-salade.mp4"
+    },
+    {
+        titre: "Bibimbap : Bœuf, Œuf et Salade de Carottes",
+        image: "../assets/images/salee/oeuf-boeuf-saldade.png",
+        description: "Ce plat équilibré et nutritif est parfait pour un repas sain et rassasiant, qui soutient votre vitalité tout en régalant vos papilles. Cliquez pour découvrir ...",
+        like: 0,
+        categorie: "bibimbap, boeuf, oeuf, salade, carotte",
+        video: "https://www.youtube.com/watch?v=6QQ67F8y2b8"
+    },
+    {
+        titre: "Poke Bowl Tropical : Saumon, Mangue et Avocat",
+        image: "../assets/images/salee/pokebowl.png",
+        description: "Ce bol nutritif et équilibré est parfait pour un repas sain et coloré, riche en vitamines et en oméga-3",
+        like: 0,
+        categorie: "poke, bowl, saumon, mangue, avocat",
+        video: "https://www.youtube.com/watch?v=ez4zQr6CSnY"
+    },
+/* FIN SALEE */
+
+    {
+        titre: "Spaghetti Carbonara",
+        image: "../assets/images/carbonara.jpg",
+        description: "Une délicieuse recette italienne de spaghetti à la carbonara.",
+        like: 0,
+        categorie: "recettes salés",
+        video: "https://www.youtube.com/watch?v=exemple1"
+    },
+    {
+        titre: "Spaghetti Carbonara",
+        image: "../assets/images/carbonara.jpg",
+        description: "Une délicieuse recette italienne de spaghetti à la carbonara.",
+        like: 0,
+        categorie: "recettes salés",
+        video: "https://www.youtube.com/watch?v=exemple1"
     },
     {
         titre: "Spaghetti Carbonara",
