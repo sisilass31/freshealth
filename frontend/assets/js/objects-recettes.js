@@ -58,7 +58,7 @@ const recettes = [
 
     {
         titre: "Spaghetti Carbonara",
-        image: "../assets/images/carbonara.jpg",
+        image: "../assets/images/sucrés.png",
         description: "Une délicieuse recette italienne de spaghetti à la carbonara.",
         like: 0,
         categorie: "recettes salés",
