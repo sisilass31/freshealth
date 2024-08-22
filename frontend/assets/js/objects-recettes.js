@@ -5,7 +5,10 @@ const recettes = [
         description: "Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les papilles. Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!",
         like: 0,
         categorie: "recettes salées",
-        video: "https://www.youtube.com/watch?v=exemple1"
+        video: "https://www.youtube.com/watch?v=exemple1",
+        motsCles: "hgjkl",
+        ingredients: "dffghkjlk,rsdtfygukh",
+        preparation: "vbghjkljhgfdfghyjuikuyhgfdsfghjukilkujhgfdsfghjukilomlikujyhgfdsfghtyuio",
     },
     {
         titre: "Spaghetti Carbonara",
