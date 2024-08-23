@@ -47,11 +47,18 @@
 }
 
 .close-popup {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
+  color: var(--white);
+  background-color: var(--background-dark);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: fixed;
+  top: 25px;
+  right: 35px;
+  font-size: 25px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
@@ -59,7 +66,7 @@
 
 .close-popup:hover,
 .close-popup:focus {
-  color: black;
+  background-color: var(--darkgreen);
   text-decoration: none;
   cursor: pointer;
 }
@@ -92,7 +99,8 @@
 }
 
 .titrePopUp h2 {
-  text-align: center;
+  text-align: start;
+  width: 335px;
 }
 
 /*VIDEO DE FOND */
@@ -147,7 +155,6 @@
 .video {
   width: 100%;
   height: 100%;
-  display: none;
   z-index: 1;
 }
 
@@ -215,7 +222,9 @@
 
 .ingredients-popup {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+  overflow-x: scroll;
   gap: 20px;
   justify-content: space-between;
   margin-top: 18px;
@@ -262,7 +271,7 @@
 .etapes-popup {
   display: flex;
   gap: 40px;
-  align-items: center;
+  align-items: start;
   border-radius: 6px;
 }
 
@@ -342,10 +351,15 @@ tbody td {
   align-items: center;
   color: var(--black);
   gap: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   /* text-decoration: none; */
 }
-.diviconrecipe {
+.filter-container {
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
   gap: 30px;
 }
 .sectionicon {
@@ -374,7 +388,7 @@ tbody td {
   justify-content: center;
   margin: 50px auto;
   gap: 50px;
-  padding: auto;
+  padding: 0 20px;
 }
 .imgrecipe {
   width: 225px;
@@ -395,6 +409,12 @@ tbody td {
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
   padding: 90px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blockcard p {
+  height: 150px;
 }
 .titlerecipe {
   margin-bottom: 15px;
@@ -404,8 +424,8 @@ tbody td {
   justify-content: space-between;
   margin-top: 30px;
 }
-#love {
-  font-size: 35px;
+.cardlovevoirplus i {
+  font-size: 30px;
 }
 .buttonrecipevoirplus {
   cursor: pointer;
@@ -472,19 +492,23 @@ tbody td {
   .ingredients-popup {
     justify-content: start;
   }
-  .diviconrecipe {
-    display: none;
+  .filter-container {
+    padding: 0 28px;
+    width: 100%;
+    scrollbar-width: none;
+    overflow-x: scroll;
   }
   .cardrecipe {
     margin: 0px auto !important;
-    }
+  }
 }
 
 @media screen and (max-width: 910px) {
   .recettePopUp {
     flex-direction: column;
     align-items: start;
-  }.iconePopUp {
+  }
+  .iconePopUp {
     margin-top: 16px;
   }
 }
