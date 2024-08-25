@@ -267,6 +267,7 @@ const recettes = [
             "Dégustez avec des fruits frais ou un peu de miel !",
         ],
     },
+
     // tarte au citron
     {
         titre: "Tarte au citron",
@@ -305,6 +306,40 @@ const recettes = [
         ],
     },
 
+    //
+    {
+        titre: "Salade de Fruits Sucrée",
+        image: "../assets/images/Sucrée/salade-de-fruits-dhier.png",
+        description: "Une salade de fruits frais et sucrés, idéale pour un dessert léger et rafraîchissant ou une collation saine.",
+        like: 0,
+        categorie: "sucrés",
+        motsCles: "salade de fruits, sucré, dessert, frais, sain",
+        video: "https://www.youtube.com/embed/somevideoid",  // Remplacez 'somevideoid' par l'identifiant de votre vidéo si disponible.
+        ingredients: [
+            { nom: "Fraises", image: "../assets/images/Image-Indrégients/fraises.png" },
+            { nom: "Kiwi", image: "../assets/images/Image-Indrégients/kiwi.png" },
+            { nom: "Mangue", image: "../assets/images/Image-Indrégients/mangue.png" },
+            { nom: "Pomme", image: "../assets/images/Image-Indrégients/pomme.png" },
+            { nom: "Raisins", image: "../assets/images/Image-Indrégients/raisins.png" },
+            { nom: "Oranges", image: "../assets/images/Image-Indrégients/oranges.png" },
+            { nom: "Menthe fraîche (optionnel)", image: "../assets/images/Image-Indrégients/menthe.png" },
+            { nom: "Jus de citron", image: "../assets/images/Image-Indrégients/citron.png" },
+            { nom: "Miel ou sirop d'agave (optionnel)", image: "../assets/images/Image-Indrégients/miel.png" }
+        ],
+        etapes: [
+            "Laver soigneusement tous les fruits.",
+            "Couper les fraises en morceaux, peler et couper le kiwi, la mangue et la pomme en dés.",
+            "Couper les raisins en deux si ils sont gros.",
+            "Peler et découper les oranges en segments ou en morceaux.",
+            "Dans un grand saladier, mélanger tous les fruits coupés.",
+            "Ajouter quelques feuilles de menthe fraîche si désiré pour une touche aromatique.",
+            "Presser un peu de jus de citron sur la salade de fruits pour éviter l'oxydation et ajouter une touche de fraîcheur.",
+            "Si vous souhaitez un peu plus de douceur, ajouter un filet de miel ou de sirop d'agave.",
+            "Mélanger délicatement pour bien enrober les fruits de citron et de miel.",
+            "Réfrigérer pendant environ 30 minutes avant de servir pour permettre aux saveurs de se mélanger.",
+            "Servir frais et déguster immédiatement pour profiter de la fraîcheur des fruits."
+        ]
+    },    
     /******************** sucrés ********************/
 
     /******************** petit dej ********************/
@@ -985,6 +1020,34 @@ const recettes = [
         ],
     },
 
+    //smoothie fruit rouge
+    {
+        titre: "Smoothie aux Fruits Rouges",
+        image: "../assets/images/boissons/smoothie-rose.png",
+        description: "Un smoothie rafraîchissant et vitaminé, composé de fruits rouges mélangés pour une explosion de saveurs et de nutriments.",
+        like: 0,
+        categorie: "boissons",
+        motsCles: "smoothie, fruits rouges, vitaminé, rafraîchissant, santé",
+        video: "https://www.youtube.com/embed/somevideoid",  // Remplacez 'somevideoid' par l'identifiant de votre vidéo si disponible.
+        ingredients: [
+            { nom: "Fruits rouges mélangés (fraises, framboises, myrtilles, etc.)", image: "../assets/images/Image-Indrégients/fruits-rouges.png" },
+            { nom: "Banane", image: "../assets/images/Image-Indrégients/banane.png" },
+            { nom: "Yaourt nature ou yaourt à base de plantes", image: "../assets/images/Image-Indrégients/yaourt.png" },
+            { nom: "Lait (ou lait d'amande, soja, etc.)", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Miel ou sirop d'agave (optionnel)", image: "../assets/images/Image-Indrégients/miel.png" },
+            { nom: "Glace (optionnel, pour une texture plus onctueuse)", image: "../assets/images/Image-Indrégients/glace.png" }
+        ],
+        etapes: [
+            "Laver soigneusement les fruits rouges si vous utilisez des fruits frais.",
+            "Peler la banane et la couper en morceaux.",
+            "Dans un mixeur, ajouter les fruits rouges, les morceaux de banane, et le yaourt.",
+            "Ajouter le lait jusqu'à obtenir la consistance désirée.",
+            "Si vous préférez un smoothie plus sucré, ajouter du miel ou du sirop d'agave selon vos goûts.",
+            "Pour une texture plus onctueuse, ajouter de la glace.",
+            "Mixer jusqu'à obtenir une texture lisse et homogène.",
+            "Verser dans un verre et servir immédiatement pour profiter de toute la fraîcheur et des nutriments des fruits."
+        ]
+    },      
     /******************** boissons ********************/
 ];
 
