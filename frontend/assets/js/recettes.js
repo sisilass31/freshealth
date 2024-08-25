@@ -17,10 +17,6 @@ window.filterArticles = function (categorie) {
     // chaque <article> représente une recette
     const articles = document.querySelectorAll(".cardrecipe article");
 
-    // enregistre la catégorie sélectionnée dans le localStorage
-    // par exemple si je vais sur "snacks" et que je refresh la page je reste sur snacks
-    localStorage.setItem('selectedCategory', categorie);
-
     // parcourt chaque article pour filtrer en fonction de la catégorie sélectionnée
     articles.forEach((article) => {
         // on récupère (getAttribute) le data-categorie c'est à dire la catégorie de la recette
@@ -53,14 +49,8 @@ window.filterArticles = function (categorie) {
 
 // attend que le DOM soit complètement chargé avant d'exécuter le reste du script
 document.addEventListener('DOMContentLoaded', () => {
-    // on récupère les recettes mélangées depuis le localStorage si elles existent, sinon on les mélange
-    let recettesMelangees = localStorage.getItem('recettesMelangees');
-    if (recettesMelangees) {
-        recettesMelangees = JSON.parse(recettesMelangees);
-    } else {
-        recettesMelangees = melangerRecettes([...recettes]); // Utiliser une copie du tableau `recettes`
-        localStorage.setItem('recettesMelangees', JSON.stringify(recettesMelangees));
-    }
+    // mélange les recettes
+    const recettesMelangees = melangerRecettes([...recettes]);
 
     // on récupère la div qui contient nos recettes
     const cardrecipe = document.querySelector('.cardrecipe');
@@ -98,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const index = event.currentTarget.getAttribute('data-index');
 
             // on récupère l'objet recette correspondant à cet index dans le tableau `recettesMelangees`
-            //  indique la position de la recette dans le tableau recettesMelangees
             const recette = recettesMelangees[index];
 
             // met le titre du modal avec le titre de la recette sélectionnée
@@ -163,8 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // on récupère la catégorie sélectionnée depuis le localStorage, ou on utilise 'toutes' par défaut
-    const savedCategory = localStorage.getItem('selectedCategory') || 'toutes';
-    // on initialise les articles en affichant ceux de la catégorie sauvegardée ou 'toutes' par défaut
-    filterArticles(savedCategory);
+    // on initialise les articles en affichant tous les articles par défaut
+    filterArticles('toutes');
 });

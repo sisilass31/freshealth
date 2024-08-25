@@ -1,5 +1,6 @@
 const recettes = [
-    /* DEBUT SALEE */
+    /******************** salées ********************/
+
     //bagel
     {
         titre: "Bagel Fraîcheur au Saumon",
@@ -224,9 +225,11 @@ const recettes = [
             "Servir chaud, décoré avec quelques herbes fraîches.",
         ],
     },
-    /* FIN SALEE */
 
-    /* DEBUT SUCRÉE*/
+    /******************** salées ********************/
+
+    /******************** sucrés ********************/
+
     // crêpe
     {
         titre: "Crêpe",
@@ -302,9 +305,488 @@ const recettes = [
         ],
     },
 
-    /* FIN SUCRE */
+    /******************** sucrés ********************/
 
-    /* DEBUT SNACKS */
+    /******************** petit dej ********************/
+
+    // bowlcake
+    {
+        titre: "BowlCake chocolat Noisette",
+        image: "../assets/images/petitDej/bowlCakeChocoNoisette.png",
+        description: "Savourez un délicieux bowlcake au chocolat et noisette, parfait pour un petit déjeuner gourmand.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, bowlcake, chocolat, noisette",
+        video: "https://www.youtube.com/embed/-rVUjWhMFas",
+        ingredients: [
+            { nom: "Farine", image: "../assets/images/Image-Indrégients/farine.png" },
+            { nom: "Poudre de noisettes", image: "../assets/images/Image-Indrégients/poudre-noisettes.png" },
+            { nom: "Cacao en poudre", image: "../assets/images/Image-Indrégients/cacao.png" },
+            { nom: "Œuf", image: "../assets/images/Image-Indrégients/oeuf.png" },
+            { nom: "Lait", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Levure chimique", image: "../assets/images/Image-Indrégients/levure.png" },
+            { nom: "Sucre", image: "../assets/images/Image-Indrégients/sucre.png" }
+        ],
+        etapes: [
+            "Dans un bol, mélanger la farine, la poudre de noisettes, le cacao en poudre, et la levure chimique.",
+            "Ajouter l'œuf et le lait, puis mélanger jusqu'à obtenir une pâte homogène.",
+            "Incorporer le sucre selon vos goûts.",
+            "Verser la préparation dans un bol allant au micro-ondes.",
+            "Cuire au micro-ondes pendant environ 2 à 3 minutes, jusqu'à ce que le bowlcake soit cuit mais encore moelleux à l'intérieur.",
+            "Laisser refroidir légèrement avant de déguster."
+        ]
+    },
+
+    // smoothie bowl acai
+    {
+        titre: "Smoothie Bowl acai, fruits rouges et Granola",
+        image: "../assets/images/petitDej/smoothieBowlBerry.png",
+        description: "Un smoothie bowl aux fruits rouges et granola, à base d’açaï pour un petit déjeuner frais et vitaminé.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, smoothie bowl, acai, fruits rouges, granola",
+        video: "https://www.youtube.com/embed/P_npUrYPAx8?si=4B31RAY6FHygR83f",
+        ingredients: [
+            { nom: "Açaï en poudre", image: "../assets/images/Image-Indrégients/acai.png" },
+            { nom: "Fruits rouges (frais ou surgelés)", image: "../assets/images/Image-Indrégients/fruits-rouges.png" },
+            { nom: "Banane", image: "../assets/images/Image-Indrégients/banane.png" },
+            { nom: "Lait ou lait d’amande", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Granola", image: "../assets/images/Image-Indrégients/granola.png" },
+            { nom: "Miel (optionnel)", image: "../assets/images/Image-Indrégients/miel.png" }
+        ],
+        etapes: [
+            "Dans un blender, mixer les fruits rouges, la banane, l'açaï en poudre, et le lait jusqu'à obtenir une consistance lisse.",
+            "Verser le mélange dans un bol.",
+            "Ajouter le granola par-dessus, et décorer avec des fruits frais supplémentaires si désiré.",
+            "Ajouter un filet de miel si vous souhaitez plus de douceur.",
+            "Servir immédiatement pour profiter de la fraîcheur."
+        ]
+    },
+
+    // overnight oat chocolat
+    {
+        titre: "Overnight Oat Chocolat",
+        image: "../assets/images/petitDej/overnightOatChocolat.png",
+        description: "Un petit déjeuner préparé la veille, ces overnight oats au chocolat sont rapides, faciles et délicieux.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, overnight oats, chocolat, avoine",
+        video: "https://www.youtube.com/embed/NsAz5TpGeeg?si=wz7qlnCr443gNyC3",
+        ingredients: [
+            { nom: "Flocons d'avoine", image: "../assets/images/Image-Indrégients/flocons-avoine.png" },
+            { nom: "Lait (ou lait végétal)", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Cacao en poudre", image: "../assets/images/Image-Indrégients/cacao.png" },
+            { nom: "Sirop d'érable (ou miel)", image: "../assets/images/Image-Indrégients/sirop-erable.png" },
+            { nom: "Graines de chia", image: "../assets/images/Image-Indrégients/graines-chia.png" },
+            { nom: "Pépites de chocolat", image: "../assets/images/Image-Indrégients/pepites-chocolat.png" }
+        ],
+        etapes: [
+            "Dans un bol ou un bocal, mélanger les flocons d'avoine, le cacao en poudre et les graines de chia.",
+            "Ajouter le lait et le sirop d'érable, puis bien mélanger jusqu'à ce que tous les ingrédients soient incorporés.",
+            "Couvrir et réfrigérer pendant la nuit (au moins 6 heures).",
+            "Le lendemain matin, sortir du réfrigérateur et ajouter des pépites de chocolat ou d'autres garnitures de votre choix.",
+            "Déguster froid ou légèrement réchauffé, selon vos préférences."
+        ]
+    },
+
+    //avocat toast
+    {
+        titre: "Avocado toast",
+        image: "../assets/images/petitDej/avocadoToast.png",
+        description: "Un toast à l’avocat, simple et sain, pour un petit déjeuner rapide et nutritif.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, avocado toast, avocat, sain",
+        video: "https://www.youtube.com/embed/44FR8r8Kw2s?si=fIZsHyO5wdGaqwek",
+        ingredients: [
+            { nom: "Pain complet", image: "../assets/images/Image-Indrégients/pain-complet.png" },
+            { nom: "Avocat", image: "../assets/images/Image-Indrégients/avocat.png" },
+            { nom: "Citron", image: "../assets/images/Image-Indrégients/citron.png" },
+            { nom: "Sel", image: "../assets/images/Image-Indrégients/sel.png" },
+            { nom: "Poivre", image: "../assets/images/Image-Indrégients/poivre.png" },
+            { nom: "Piment en flocons (optionnel)", image: "../assets/images/Image-Indrégients/piment-flocons.png" }
+        ],
+        etapes: [
+            "Faire griller une tranche de pain complet jusqu'à ce qu'elle soit bien croustillante.",
+            "Pendant ce temps, écraser l'avocat dans un bol à l'aide d'une fourchette.",
+            "Ajouter un filet de jus de citron dans l'avocat écrasé pour éviter qu'il ne noircisse et pour rehausser la saveur.",
+            "Assaisonner l'avocat avec du sel et du poivre selon vos goûts.",
+            "Étaler généreusement l'avocat assaisonné sur le pain grillé.",
+            "Ajouter des flocons de piment si vous aimez une touche de piquant.",
+            "Servir immédiatement pour un petit déjeuner frais et savoureux."
+        ]
+    },  
+    
+    // yogurt bowl
+    {
+        titre: "Yogurt bowl",
+        image: "../assets/images/petitDej/yogurtBowl.png",
+        description: "Un bol de yaourt garni de fruits et de granola pour un petit déjeuner équilibré.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, yaourt, fruits, granola, équilibré",
+        video: "https://www.youtube.com/embed/7TiqxOozqgQ?si=MsgZd8OKMibmzdUR",
+        ingredients: [
+            { nom: "Yaourt nature", image: "../assets/images/Image-Indrégients/yaourt-nature.png" },
+            { nom: "Fruits frais (fraises, bananes, myrtilles)", image: "../assets/images/Image-Indrégients/fruits-frais.png" },
+            { nom: "Graines (chia, lin, etc.)", image: "../assets/images/Image-Indrégients/graines.png" }
+        ],
+        etapes: [
+            "Verser le yaourt nature dans un bol.",
+            "Ajouter par-dessus les fruits frais coupés en morceaux.",
+            "Parsemer de granola pour apporter du croquant.",
+            "Ajouter des graines pour un supplément de nutriments et de texture.",
+            "Arroser d'un filet de miel ou de sirop d'érable si vous souhaitez plus de douceur.",
+            "Déguster immédiatement pour un petit déjeuner frais et équilibré."
+        ]
+    },   
+    
+    // pancake banane
+    {
+        titre: "Pancake banane pecan",
+        image: "../assets/images/petitDej/pancakeBananePecan.png",
+        description: "Des pancakes moelleux à la banane et aux noix de pécan, parfaits pour un petit déjeuner gourmand et nutritif.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, pancake, banane, pecan",
+        video: "https://www.youtube.com/embed/vidéoPancakeBananePecan",
+        ingredients: [
+            { nom: "Farine", image: "../assets/images/Image-Indrégients/farine.png" },
+            { nom: "Banane", image: "../assets/images/Image-Indrégients/banane.png" },
+            { nom: "Lait", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Œuf", image: "../assets/images/Image-Indrégients/oeuf.png" },
+            { nom: "Levure chimique", image: "../assets/images/Image-Indrégients/levure.png" },
+            { nom: "Noix de pécan", image: "../assets/images/Image-Indrégients/noix-pecan.png" },
+            { nom: "Sirop d'érable (optionnel)", image: "../assets/images/Image-Indrégients/sirop-erable.png" }
+        ],
+        etapes: [
+            "Dans un grand bol, mélanger la farine et la levure chimique.",
+            "Écraser les bananes dans un autre bol, puis ajouter l'œuf et le lait. Bien mélanger.",
+            "Incorporer les ingrédients secs dans le mélange de bananes jusqu'à obtenir une pâte homogène.",
+            "Ajouter les noix de pécan concassées à la pâte.",
+            "Chauffer une poêle à feu moyen et verser une petite louche de pâte pour former un pancake.",
+            "Cuire chaque pancake jusqu'à ce que des bulles apparaissent à la surface, puis retourner et cuire l'autre côté jusqu'à ce qu'il soit doré.",
+            "Servir chaud avec un filet de sirop d'érable si désiré."
+        ]
+    },
+    
+    // pudding chia mangue
+    {
+        titre: "Pudding Chia Mangue",
+        image: "../assets/images/petitDej/puddingMangue.png",
+        description: "Un pudding léger et rafraîchissant à base de graines de chia et de mangue, parfait pour un petit déjeuner ou un dessert sain.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, pudding chia, mangue, sain",
+        video: "https://www.youtube.com/embed/vidéoPuddingChiaMangue",
+        ingredients: [
+            { nom: "Graines de chia", image: "../assets/images/Image-Indrégients/graines-chia.png" },
+            { nom: "Lait de coco", image: "../assets/images/Image-Indrégients/lait-coco.png" },
+            { nom: "Mangue (fraîche ou surgelée)", image: "../assets/images/Image-Indrégients/mangue.png" },
+            { nom: "Miel ou sirop d'érable (optionnel)", image: "../assets/images/Image-Indrégients/miel.png" },
+            { nom: "Extrait de vanille (optionnel)", image: "../assets/images/Image-Indrégients/vanille.png" }
+        ],
+        etapes: [
+            "Dans un bol, mélanger les graines de chia avec le lait de coco. Ajouter un peu de miel ou de sirop d'érable et de l'extrait de vanille si vous le souhaitez.",
+            "Mélanger soigneusement et laisser reposer au réfrigérateur pendant au moins 4 heures ou toute la nuit pour permettre aux graines de chia d'absorber le liquide et de gonfler.",
+            "Pendant ce temps, préparer la mangue en la coupant en petits morceaux.",
+            "Au moment de servir, remuer le pudding pour vérifier la consistance. Ajouter des morceaux de mangue par-dessus.",
+            "Décorer avec des feuilles de menthe ou des graines supplémentaires si désiré.",
+            "Déguster frais pour un petit déjeuner ou un dessert délicieux."
+        ]
+    },    
+    
+    // pain perdu
+    {
+        titre: "Pain Perdu Healthy",
+        image: "../assets/images/petitDej/painPerdu.png",
+        description: "Une version saine du classique pain perdu, parfait pour un petit déjeuner ou un brunch équilibré, avec des ingrédients nutritifs.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, pain perdu, healthy, équilibré",
+        video: "https://www.youtube.com/embed/vidéoPainPerduHealthy",
+        ingredients: [
+            { nom: "Pain complet ou pain de seigle", image: "../assets/images/Image-Indrégients/pain-complet.png" },
+            { nom: "Œufs", image: "../assets/images/Image-Indrégients/oeuf.png" },
+            { nom: "Lait d'amande ou lait écrémé", image: "../assets/images/Image-Indrégients/lait-amande.png" },
+            { nom: "Banane (pour remplacer le sucre)", image: "../assets/images/Image-Indrégients/banane.png" },
+            { nom: "Cannelle en poudre", image: "../assets/images/Image-Indrégients/cannelle.png" },
+            { nom: "Fruits frais (fraises, myrtilles, etc.)", image: "../assets/images/Image-Indrégients/fruits-frais.png" },
+            { nom: "Sirop d'érable (optionnel)", image: "../assets/images/Image-Indrégients/sirop-erable.png" }
+        ],
+        etapes: [
+            "Dans un bol, battre les œufs avec le lait d'amande et la cannelle en poudre.",
+            "Écraser une banane et l'ajouter au mélange pour sucrer naturellement.",
+            "Tremper les tranches de pain complet dans le mélange d'œufs, en les laissant s'imprégner des deux côtés.",
+            "Chauffer une poêle antiadhésive à feu moyen et cuire les tranches de pain jusqu'à ce qu'elles soient dorées et croustillantes des deux côtés.",
+            "Servir chaud avec des fruits frais et un filet de sirop d'érable si désiré."
+        ]
+    },  
+
+    // porridge pomme cannelle
+    {
+        titre: "Porridge Pomme Cannelle",
+        image: "../assets/images/petitDej/porridgeAppleCinnamon.png",
+        description: "Un porridge réconfortant à la pomme et à la cannelle, idéal pour un petit déjeuner chaud et nutritif.",
+        like: 0,
+        categorie: "petit-dej",
+        motsCles: "petit dej, porridge, pomme, cannelle, réconfortant",
+        video: "https://www.youtube.com/embed/vidéoPorridgeCannelle",
+        ingredients: [
+            { nom: "Flocons d'avoine", image: "../assets/images/Image-Indrégients/flocons-avoine.png" },
+            { nom: "Lait (ou lait d'amande)", image: "../assets/images/Image-Indrégients/lait.png" },
+            { nom: "Pomme", image: "../assets/images/Image-Indrégients/pomme.png" },
+            { nom: "Cannelle en poudre", image: "../assets/images/Image-Indrégients/cannelle.png" },
+            { nom: "Miel ou sirop d'érable (optionnel)", image: "../assets/images/Image-Indrégients/miel.png" },
+            { nom: "Noix ou graines (optionnel)", image: "../assets/images/Image-Indrégients/noix.png" }
+        ],
+        etapes: [
+            "Dans une casserole, combiner les flocons d'avoine avec le lait et porter à ébullition à feu moyen.",
+            "Réduire le feu et laisser mijoter en remuant régulièrement jusqu'à ce que les flocons d'avoine absorbent le liquide et deviennent tendres, environ 5-10 minutes.",
+            "Pendant ce temps, éplucher et couper la pomme en petits morceaux.",
+            "Ajouter les morceaux de pomme au porridge et continuer à cuire jusqu'à ce qu'ils soient tendres, environ 2-3 minutes.",
+            "Incorporer la cannelle en poudre et mélanger bien.",
+            "Servir chaud avec un filet de miel ou de sirop d'érable si vous le souhaitez, et garnir de noix ou de graines si désiré."
+        ]
+    },
+
+    /******************** petit dej ********************/
+
+    /******************** veggy ********************/
+
+    // curry de lentilles corail
+    {
+        titre: "Curry de Lentilles Corail",
+        image: "../assets/images/veggy/curryLentillesCorail.png",
+        description: "Un curry savoureux et épicé à base de lentilles corail, parfait pour un repas réconfortant.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, curry, lentilles corail, épicé, réconfortant",
+        video: "https://www.youtube.com/embed/0LrXnxhH5I0?si=mce7QUq7r2eShCsL",
+        ingredients: [
+            { nom: "Lentilles corail", image: "../assets/images/Image-Indrégients/lentilles-corail.png" },
+            { nom: "Oignon", image: "../assets/images/Image-Indrégients/oignon.png" },
+            { nom: "Ail", image: "../assets/images/Image-Indrégients/ail.png" },
+            { nom: "Tomates en dés", image: "../assets/images/Image-Indrégients/tomates.png" },
+            { nom: "Lait de coco", image: "../assets/images/Image-Indrégients/lait-coco.png" },
+            { nom: "Pâte de curry", image: "../assets/images/Image-Indrégients/pate-curry.png" },
+            { nom: "Épinards (optionnel)", image: "../assets/images/Image-Indrégients/epinards.png" },
+            { nom: "Huile d'olive ou huile de coco", image: "../assets/images/Image-Indrégients/huile.png" }
+        ],
+        etapes: [
+            "Dans une grande casserole, chauffer l'huile d'olive ou l'huile de coco à feu moyen.",
+            "Ajouter l'oignon finement haché et faire revenir jusqu'à ce qu'il soit translucide.",
+            "Incorporer l'ail émincé et la pâte de curry, et faire sauter pendant 1-2 minutes jusqu'à ce que les arômes se dégagent.",
+            "Ajouter les tomates en dés et cuire jusqu'à ce qu'elles soient bien intégrées dans la base du curry.",
+            "Ajouter les lentilles corail et bien mélanger.",
+            "Verser le lait de coco et ajouter de l'eau si nécessaire pour couvrir les lentilles.",
+            "Porter à ébullition, puis réduire le feu et laisser mijoter jusqu'à ce que les lentilles soient tendres et le curry épaissi, environ 20-25 minutes.",
+            "Incorporer les épinards si vous en utilisez, et cuire jusqu'à ce qu'ils soient flétris.",
+            "Rectifier l'assaisonnement avec du sel et du poivre selon vos préférences.",
+            "Servir chaud avec du riz basmati ou du pain naan."
+        ]
+    },    
+
+    // mediterranean bowl
+    {
+        titre: "Mediterranean Bowl",
+        image: "../assets/images/veggy/mediterraneanBowl.png",
+        description: "Un bol méditerranéen frais et coloré, rempli de saveurs et d'ingrédients sains.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, méditerranéen, bol, sain, frais",
+        video: "https://www.youtube.com/embed/MRxoI5x5mdc?si=21itjrzLeL-HWuR0",
+        ingredients: [
+            { nom: "Quinoa", image: "../assets/images/Image-Indrégients/quinoa.png" },
+            { nom: "Pois chiches", image: "../assets/images/Image-Indrégients/pois-chiches.png" },
+            { nom: "Concombre", image: "../assets/images/Image-Indrégients/concombre.png" },
+            { nom: "Tomates cerises", image: "../assets/images/Image-Indrégients/tomates-cerises.png" },
+            { nom: "Olives noires", image: "../assets/images/Image-Indrégients/olives-noires.png" },
+            { nom: "Feta", image: "../assets/images/Image-Indrégients/feta.png" },
+            { nom: "Avocat", image: "../assets/images/Image-Indrégients/avocat.png" },
+            { nom: "Citron (pour la vinaigrette)", image: "../assets/images/Image-Indrégients/citron.png" },
+            { nom: "Huile d'olive", image: "../assets/images/Image-Indrégients/huile-olive.png" },
+            { nom: "Herbes fraîches (menthe, basilic)", image: "../assets/images/Image-Indrégients/herbes.png" }
+        ],
+        etapes: [
+            "Cuire le quinoa selon les instructions sur l'emballage, puis laisser refroidir.",
+            "Rincer et égoutter les pois chiches.",
+            "Couper le concombre, les tomates cerises et l'avocat en morceaux.",
+            "Dans un grand bol, combiner le quinoa, les pois chiches, le concombre, les tomates cerises, les olives noires et la feta émiettée.",
+            "Ajouter les morceaux d'avocat.",
+            "Préparer la vinaigrette en mélangeant le jus de citron avec de l'huile d'olive, puis assaisonner avec du sel et du poivre.",
+            "Verser la vinaigrette sur le bol et mélanger délicatement.",
+            "Garnir avec des herbes fraîches comme la menthe ou le basilic.",
+            "Servir immédiatement pour un repas frais et équilibré."
+        ]
+    },    /******************** veggy ********************/
+
+    // soupe tomate rôties basilic
+    {
+        titre: "Soupe Tomate Rôties Basilic",
+        image: "../assets/images/veggy/soupeTomateBasilic.png",
+        description: "Une soupe réconfortante à base de tomates rôties et de basilic frais, idéale pour les soirées fraîches.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, soupe, tomate, basilic, réconfortant",
+        video: "https://www.youtube.com/embed/qK15KwDBNBU?si=4BkjTrrSDcBIoTbV",
+        ingredients: [
+            { nom: "Tomates", image: "../assets/images/Image-Indrégients/tomates.png" },
+            { nom: "Oignon", image: "../assets/images/Image-Indrégients/oignon.png" },
+            { nom: "Ail", image: "../assets/images/Image-Indrégients/ail.png" },
+            { nom: "Bouillon de légumes", image: "../assets/images/Image-Indrégients/bouillon-legumes.png" },
+            { nom: "Huile d'olive", image: "../assets/images/Image-Indrégients/huile-olive.png" },
+            { nom: "Basilic frais", image: "../assets/images/Image-Indrégients/basilic.png" },
+            { nom: "Sel et poivre", image: "../assets/images/Image-Indrégients/sel-poivre.png" }
+        ],
+        etapes: [
+            "Préchauffer le four à 200°C (400°F).",
+            "Couper les tomates en deux et les disposer sur une plaque de cuisson. Ajouter l'oignon et l'ail en quartiers.",
+            "Arroser d'huile d'olive et assaisonner avec du sel et du poivre.",
+            "Rôtir au four pendant environ 30-35 minutes, jusqu'à ce que les tomates soient bien caramélisées.",
+            "Transférer les tomates, l'oignon et l'ail dans une grande casserole. Ajouter le bouillon de légumes.",
+            "Porter à ébullition, puis réduire le feu et laisser mijoter pendant 10 minutes.",
+            "Utiliser un mixeur plongeant pour réduire la soupe en purée lisse. Vous pouvez aussi utiliser un mixeur traditionnel en procédant par lots.",
+            "Incorporer des feuilles de basilic frais dans la soupe et mélanger.",
+            "Rectifier l'assaisonnement avec du sel et du poivre selon vos préférences.",
+            "Servir chaud, garni de feuilles de basilic frais si désiré."
+        ]
+    },
+
+    // risotto aux champignons
+    {
+        titre: "Risotto aux Champignons",
+        image: "../assets/images/veggy/RisottoChampignons.png",
+        description: "Un risotto crémeux et savoureux aux champignons, parfait pour un dîner végétarien gourmand.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, risotto, champignons, crémeux, végétarien",
+        video: "https://www.youtube.com/embed/O_efDm0-f7Q?si=yW6-VBDRZJ7_3oOx",
+        ingredients: [
+            { nom: "Riz arborio", image: "../assets/images/Image-Indrégients/riz-arborio.png" },
+            { nom: "Champignons (de votre choix, ex: champignons de Paris, shiitake)", image: "../assets/images/Image-Indrégients/champignons.png" },
+            { nom: "Oignon", image: "../assets/images/Image-Indrégients/oignon.png" },
+            { nom: "Ail", image: "../assets/images/Image-Indrégients/ail.png" },
+            { nom: "Bouillon de légumes", image: "../assets/images/Image-Indrégients/bouillon-legumes.png" },
+            { nom: "Parmesan râpé", image: "../assets/images/Image-Indrégients/parmesan.png" },
+            { nom: "Vin blanc (optionnel)", image: "../assets/images/Image-Indrégients/vin-blanc.png" },
+            { nom: "Huile d'olive ou beurre", image: "../assets/images/Image-Indrégients/huile-beurre.png" },
+            { nom: "Persil frais (pour garnir)", image: "../assets/images/Image-Indrégients/persil.png" }
+        ],
+        etapes: [
+            "Chauffer le bouillon de légumes dans une casserole à feu doux pour qu'il reste chaud.",
+            "Dans une grande poêle ou une casserole, chauffer l'huile d'olive ou le beurre à feu moyen.",
+            "Ajouter l'oignon finement haché et faire revenir jusqu'à ce qu'il soit translucide.",
+            "Incorporer l'ail émincé et cuire pendant 1 minute.",
+            "Ajouter les champignons tranchés et cuire jusqu'à ce qu'ils soient dorés et tendres.",
+            "Ajouter le riz arborio et cuire en remuant pendant environ 2 minutes, jusqu'à ce qu'il devienne translucide.",
+            "Si vous utilisez du vin blanc, ajoutez-le maintenant et laissez-le réduire presque entièrement.",
+            "Commencer à ajouter le bouillon chaud, une louche à la fois, en remuant constamment. Attendre que le liquide soit presque complètement absorbé avant d'ajouter la louche suivante.",
+            "Continuer à ajouter le bouillon et à remuer pendant environ 18-20 minutes, jusqu'à ce que le riz soit crémeux et al dente.",
+            "Incorporer le parmesan râpé et ajuster l'assaisonnement avec du sel et du poivre selon vos goûts.",
+            "Garnir de persil frais haché avant de servir.",
+            "Servir immédiatement pour profiter de la texture crémeuse du risotto."
+        ]
+    },    
+
+    // pizza aux courgettes
+    {
+        titre: "Pizza aux Courgettes",
+        image: "../assets/images/veggy/PizzaCourgette.png",
+        description: "Une pizza légère et délicieuse garnie de courgettes fraîches, idéale pour un repas estival.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, pizza, courgettes, légère, estivale",
+        video: "https://www.youtube.com/embed/hMNTffSZgdY?si=x7TE83evQXmjTXCY&start=5",
+        ingredients: [
+            { nom: "Pâte à pizza (maison ou prête à l'emploi)", image: "../assets/images/Image-Indrégients/pate-pizza.png" },
+            { nom: "Courgettes", image: "../assets/images/Image-Indrégients/courgette.png" },
+            { nom: "Sauce tomate", image: "../assets/images/Image-Indrégients/sauce-tomate.png" },
+            { nom: "Mozzarella", image: "../assets/images/Image-Indrégients/mozzarella.png" },
+            { nom: "Parmesan râpé", image: "../assets/images/Image-Indrégients/parmesan.png" },
+            { nom: "Origan séché", image: "../assets/images/Image-Indrégients/origan.png" },
+            { nom: "Huile d'olive", image: "../assets/images/Image-Indrégients/huile-olive.png" },
+            { nom: "Sel et poivre", image: "../assets/images/Image-Indrégients/sel-poivre.png" }
+        ],
+        etapes: [
+            "Préchauffer le four à 220°C (425°F).",
+            "Étaler la pâte à pizza sur une plaque de cuisson recouverte de papier sulfurisé.",
+            "Étaler une couche uniforme de sauce tomate sur la pâte.",
+            "Trancher les courgettes en fines rondelles. Les disposer sur une assiette, saler légèrement, et les laisser reposer pendant 10 minutes pour éliminer l'excès d'eau.",
+            "Essuyer les courgettes avec du papier absorbant pour enlever l'excès d'eau.",
+            "Disposer les rondelles de courgettes sur la sauce tomate.",
+            "Ajouter la mozzarella en tranches ou râpée sur les courgettes.",
+            "Saupoudrer de parmesan râpé et d'origan séché.",
+            "Arroser d'un filet d'huile d'olive et assaisonner avec du sel et du poivre.",
+            "Cuire au four pendant 15-20 minutes, ou jusqu'à ce que la pâte soit dorée et que le fromage soit fondu et légèrement doré.",
+            "Laisser refroidir légèrement avant de découper et de servir.",
+            "Servir chaud pour profiter de la pizza légère et savoureuse."
+        ]
+    },
+    
+    // wrap épinard
+    {
+        titre: "Wrap Épinards",
+        image: "../assets/images/veggy/wrapEpinards.png",
+        description: "Un wrap frais et savoureux, rempli d'épinards et d'autres ingrédients sains, parfait pour un déjeuner léger ou un en-cas.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, wrap, épinards, frais, léger",
+        video: "https://www.youtube.com/embed/5Z-tW4eZJ24?si=CT3uQ_fyPT6Z2gCs",
+        ingredients: [
+            { nom: "Tortilla ou wrap (de votre choix)", image: "../assets/images/Image-Indrégients/tortilla.png" },
+            { nom: "Épinards frais", image: "../assets/images/Image-Indrégients/epinards.png" },
+            { nom: "Avocat", image: "../assets/images/Image-Indrégients/avocat.png" },
+            { nom: "Poivron rouge", image: "../assets/images/Image-Indrégients/poivron-rouge.png" },
+            { nom: "Carottes", image: "../assets/images/Image-Indrégients/carottes.jpeg" },
+            { nom: "Houmous", image: "../assets/images/Image-Indrégients/houmous.png" },
+            { nom: "Fromage de chèvre ou feta (optionnel)", image: "../assets/images/Image-Indrégients/feta.png" },
+            { nom: "Sel et poivre", image: "../assets/images/Image-Indrégients/sel-poivre.png" }
+        ],
+        etapes: [
+            "Étaler le houmous sur toute la surface de la tortilla ou du wrap.",
+            "Laver et sécher les épinards frais, puis les répartir uniformément sur le houmous.",
+            "Couper l'avocat en tranches et les disposer sur les épinards.",
+            "Couper le poivron rouge en fines lanières et les ajouter au wrap.",
+            "Râper ou couper les carottes en julienne, puis les ajouter au wrap.",
+            "Si vous utilisez du fromage de chèvre ou de la feta, émietter ou trancher et ajouter au wrap.",
+            "Assaisonner avec du sel et du poivre selon vos préférences.",
+            "Rouler le wrap en serrant bien pour enfermer tous les ingrédients.",
+            "Couper le wrap en deux pour une présentation plus élégante ou le servir entier.",
+            "Servir immédiatement ou emballer pour emporter."
+        ]
+    }, 
+    
+    // toast avocat
+    {
+        titre: "Toast Avocat, Tomate et Grenade",
+        image: "../assets/images/veggy/toastAvocatTomateGrenade.png",
+        description: "Un toast frais et coloré, garni d'avocat crémeux, de tomates juteuses et de grenade pour un mélange de saveurs savoureux et croquant.",
+        like: 0,
+        categorie: "veggy",
+        motsCles: "veggy, toast, avocat, tomate, grenade, frais",
+        video: "https://www.youtube.com/embed/5Z-tW4eZJ24?si=CT3uQ_fyPT6Z2gCs",
+        ingredients: [
+            { nom: "Pain complet ou pain de votre choix", image: "../assets/images/Image-Indrégients/pain-complet.png" },
+            { nom: "Avocat", image: "../assets/images/Image-Indrégients/avocat.png" },
+            { nom: "Tomates cerises", image: "../assets/images/Image-Indrégients/tomates-cerises.png" },
+            { nom: "Graines de grenade", image: "../assets/images/Image-Indrégients/grenade.png" },
+            { nom: "Herbes fraîches (basilic, persil, etc.)", image: "../assets/images/Image-Indrégients/herbes.png" },
+            { nom: "Sel et poivre", image: "../assets/images/Image-Indrégients/sel-poivre.png" }
+        ],
+        etapes: [
+            "Faire griller les tranches de pain complet dans un grille-pain ou au four jusqu'à ce qu'elles soient dorées et croustillantes.",
+            "Pendant que le pain grille, couper l'avocat en deux, retirer le noyau, et le couper en tranches. Vous pouvez également écraser l'avocat avec une fourchette pour en faire une purée, si vous préférez.",
+            "Laver et couper les tomates cerises en deux.",
+            "Retirer les graines de grenade de leur écorce. Pour ce faire, couper la grenade en deux et taper légèrement sur le dos avec une cuillère pour libérer les graines.",
+            "Étaler l'avocat sur les tranches de pain grillé.",
+            "Disposer les tomates cerises coupées et les graines de grenade sur l'avocat.",
+            "Assaisonner avec du sel, du poivre et des herbes fraîches de votre choix.",
+            "Servir immédiatement pour profiter du toast frais et croquant."
+        ]
+    },    
+    /******************** snacks ********************/
+
     // barre de céréales
     {
         titre: "Barre de céréales",
@@ -462,9 +944,10 @@ const recettes = [
         ],
     },
 
-    /* FIN SNACKS */
+    /******************** snacks ********************/
 
-    /* boissons */
+    /******************** boissons ********************/
+
     // élixir détox
     {
         titre: "Élixir Détox: Fraîcheur et Pureté",
@@ -502,7 +985,7 @@ const recettes = [
         ],
     },
 
-    /* boissons */
+    /******************** boissons ********************/
 ];
 
 // permet l'importation dans d'autres fichiers.
