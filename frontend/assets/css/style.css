@@ -93,6 +93,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: 25px 40px;
+  backdrop-filter: blur(1px);
 }
 
 .shadow-navbar {
@@ -783,7 +784,7 @@ footer svg {
 
 @media screen and (max-width: 1350px) {
   .carousel-container {
-    width: 900px;
+    width: 802px;
   }
 }
 
@@ -946,7 +947,7 @@ footer svg {
     width: 100%;
   }
   .carousel-container {
-    width: 900px;
+    width: 802px;
   }
 }
 
@@ -984,7 +985,7 @@ footer svg {
   }
 
   .carousel-container {
-    width: 600px;
+    width: 528px;
   }
 }
 
@@ -1033,7 +1034,10 @@ footer svg {
 
 @media screen and (max-width: 700px) {
   .carousel-container {
-    width: 300px;
+    width: 250px;
+  }
+  .carousel {
+    width: 65%;
   }
   .desc-faq {
     width: 86%;
@@ -1078,11 +1082,50 @@ footer svg {
   .copyright {
     font-size: 12px;
   }
-  .carousel-container {
-    width: 300px;
-  }
   .faq-item {
     padding: 18px;
   }
+  .carousel {
+    width: 100%;
+  }
 }
 /*responsive*/
+
+/*@media screen and (max-width: 915px) {
+.profile-container {
+margin: 40px 20px !important;
+}
+.profile-details {
+width: 100%;
+}
+}
+.change-profile-pic {
+padding: 15px 20px;
+padding: 15px;
+width: 100%;
+}
+.profile-container {
+padding: 0 35px;
+padding: 0 20px;
+}
+.profile-photo {
+width: 80px;
+margin-right: 30px;
+width: 49px;
+margin-right: 15px;
+}
+.edit-profile {
+padding: 6px 16px;
+padding: 11px;
+}
+Feuille de style intégrée #2
+.profile-details h3 {
+font-size: 16px;
+}
+.desc-profile p {
+font-size: 14px;
+}
+.edit-profile p {
+font-size: 14px;
+display: none;
+}*/
