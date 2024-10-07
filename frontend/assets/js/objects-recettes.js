@@ -43,7 +43,7 @@ const recettes = [
         image: "../assets/images/salee/riz-poulet.png",
         description:
             "Un plat équilibré, riche en saveurs, parfait pour nourrir le corps et ravir les papilles. Cliquez pour transformer votre repas en un voyage gustatif vibrant et énergisant!",
-        like: 0,
+ 
         categorie: "salées",
         video: "../assets/videos/Riz-au-Poulet-et-ses-Légumes-arc-en-ciel.mp4",
         motsCles: "salée, riz, poulet, legumes",
@@ -80,7 +80,7 @@ const recettes = [
         image: "../assets/images/salee/poele-de-legume.png",
         description:
             "Craquez pour notre Poêlée Gourmande de Légumes Sautés, un mélange coloré et savoureux de légumes frais, cuits à la perfection pour préserver leurs ...",
-        like: 0,
+ 
         categorie: "salées",
         motsCles: "salée, poelee, legumes",
         video: "../assets/videos/légumes-poelee.mp4",
@@ -116,8 +116,8 @@ const recettes = [
         titre: "L'Équilibre : Saumon, Riz et Salade Croquante",
         image: "../assets/images/salee/saumon-riz.png",
         description:
-            "Ce plat équilibré et nutritif est parfait pour un repas sain, alliant saveur, légèreté et bien-être. Cliquez pour découvrir une option délicieuse qui nourrit votre corps et vos papilles.",
-        like: 0,
+            "Ce plat équilibré et nutritif est parfait pour un repas sain. Cliquez pour découvrir une option délicieuse qui nourrit votre corps et vos papilles.",
+ 
         categorie: "salées",
         motsCles: "salée, saumon, riz, salade, équilibré, nutritif",
         video: "../assets/videos/saumon-riz-salade.mp4",
@@ -157,7 +157,7 @@ const recettes = [
         image: "../assets/images/salee/oeuf-boeuf-salade.png",
         description:
             "Ce plat équilibré et nutritif est parfait pour un repas sain et rassasiant, qui soutient votre vitalité tout en régalant vos papilles. Cliquez pour découvrir ...",
-        like: 0,
+ 
         categorie: "salées",
         motsCles: "bibimbap, boeuf, oeuf, salade, carotte",
         video: "https://www.youtube.com/watch?v=6QQ67F8y2b8",
@@ -194,7 +194,7 @@ const recettes = [
         image: "../assets/images/salee/pokebowl.png",
         description:
             "Ce bol nutritif et équilibré est parfait pour un repas sain et coloré, riche en vitamines et en oméga-3",
-        like: 0,
+ 
         categorie: "salées",
         motsCles: "poke, bowl, saumon, mangue, avocat",
         video: "https://www.youtube.com/watch?v=ez4zQr6CSnY",
@@ -236,7 +236,7 @@ const recettes = [
         image: "../assets/images/Sucrée/crepe.png",
         description:
             "Ces crêpes légères et saines sont préparées avec de la farine complète et sans sucre raffiné. Elles sont parfaites brunch gourmand, un goûter, ou une envie de sucré.",
-        like: 0,
+ 
         categorie: "sucrés",
         motsCles: "crêpe, sucré",
         video: "../assets/videos/sucrée/crepe.mp4",
@@ -273,8 +273,8 @@ const recettes = [
         titre: "Tarte au citron",
         image: "../assets/images/Sucrée/tarte-citron.png",
         description:
-            "Cette tarte au citron healthy est légère et rafraîchissante, avec une base d'amandes et de flocons d'avoine, et une garniture au citron sans sucre raffiné. Parfaite pour se régaler sans culpabiliser !",
-        like: 0,
+            "Cette tarte au citron healthy est légère et rafraîchissante, avec une base d'amandes et de flocons d'avoine, et une garniture au citron sans sucre raffiné.",
+ 
         categorie: "sucrés",
         motsCles: "sucré, tarte, citron, tarte au citron",
         video: "../assets/videos/sucrée/tarte-citron.mp4",
@@ -311,7 +311,7 @@ const recettes = [
         titre: "Salade de Fruits Sucrée",
         image: "../assets/images/Sucrée/salade-de-fruits-dhier.png",
         description: "Une salade de fruits frais et sucrés, idéale pour un dessert léger et rafraîchissant ou une collation saine.",
-        like: 0,
+ 
         categorie: "sucrés",
         motsCles: "salade de fruits, sucré, dessert, frais, sain",
         video: "https://www.youtube.com/embed/somevideoid",  // Remplacez 'somevideoid' par l'identifiant de votre vidéo si disponible.
@@ -349,7 +349,7 @@ const recettes = [
         titre: "BowlCake chocolat Noisette",
         image: "../assets/images/petitDej/bowlCakeChocoNoisette.png",
         description: "Savourez un délicieux bowlcake au chocolat et noisette, parfait pour un petit déjeuner gourmand.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, bowlcake, chocolat, noisette",
         video: "https://www.youtube.com/embed/-rVUjWhMFas",
@@ -377,7 +377,7 @@ const recettes = [
         titre: "Smoothie Bowl acai, fruits rouges et Granola",
         image: "../assets/images/petitDej/smoothieBowlBerry.png",
         description: "Un smoothie bowl aux fruits rouges et granola, à base d’açaï pour un petit déjeuner frais et vitaminé.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, smoothie bowl, acai, fruits rouges, granola",
         video: "https://www.youtube.com/embed/P_npUrYPAx8?si=4B31RAY6FHygR83f",
@@ -403,7 +403,7 @@ const recettes = [
         titre: "Overnight Oat Chocolat",
         image: "../assets/images/petitDej/overnightOatChocolat.png",
         description: "Un petit déjeuner préparé la veille, ces overnight oats au chocolat sont rapides, faciles et délicieux.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, overnight oats, chocolat, avoine",
         video: "https://www.youtube.com/embed/NsAz5TpGeeg?si=wz7qlnCr443gNyC3",
@@ -429,7 +429,7 @@ const recettes = [
         titre: "Avocado toast",
         image: "../assets/images/petitDej/avocadoToast.png",
         description: "Un toast à l’avocat, simple et sain, pour un petit déjeuner rapide et nutritif.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, avocado toast, avocat, sain",
         video: "https://www.youtube.com/embed/44FR8r8Kw2s?si=fIZsHyO5wdGaqwek",
@@ -457,7 +457,7 @@ const recettes = [
         titre: "Yogurt bowl",
         image: "../assets/images/petitDej/yogurtBowl.png",
         description: "Un bol de yaourt garni de fruits et de granola pour un petit déjeuner équilibré.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, yaourt, fruits, granola, équilibré",
         video: "https://www.youtube.com/embed/7TiqxOozqgQ?si=MsgZd8OKMibmzdUR",
@@ -481,7 +481,7 @@ const recettes = [
         titre: "Pancake banane pecan",
         image: "../assets/images/petitDej/pancakeBananePecan.png",
         description: "Des pancakes moelleux à la banane et aux noix de pécan, parfaits pour un petit déjeuner gourmand et nutritif.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, pancake, banane, pecan",
         video: "https://www.youtube.com/embed/vidéoPancakeBananePecan",
@@ -510,7 +510,7 @@ const recettes = [
         titre: "Pudding Chia Mangue",
         image: "../assets/images/petitDej/puddingMangue.png",
         description: "Un pudding léger et rafraîchissant à base de graines de chia et de mangue, parfait pour un petit déjeuner ou un dessert sain.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, pudding chia, mangue, sain",
         video: "https://www.youtube.com/embed/vidéoPuddingChiaMangue",
@@ -536,7 +536,7 @@ const recettes = [
         titre: "Pain Perdu Healthy",
         image: "../assets/images/petitDej/painPerdu.png",
         description: "Une version saine du classique pain perdu, parfait pour un petit déjeuner ou un brunch équilibré, avec des ingrédients nutritifs.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, pain perdu, healthy, équilibré",
         video: "https://www.youtube.com/embed/vidéoPainPerduHealthy",
@@ -563,7 +563,7 @@ const recettes = [
         titre: "Porridge Pomme Cannelle",
         image: "../assets/images/petitDej/porridgeAppleCinnamon.png",
         description: "Un porridge réconfortant à la pomme et à la cannelle, idéal pour un petit déjeuner chaud et nutritif.",
-        like: 0,
+ 
         categorie: "petit-dej",
         motsCles: "petit dej, porridge, pomme, cannelle, réconfortant",
         video: "https://www.youtube.com/embed/vidéoPorridgeCannelle",
@@ -594,7 +594,7 @@ const recettes = [
         titre: "Curry de Lentilles Corail",
         image: "../assets/images/veggy/curryLentillesCorail.png",
         description: "Un curry savoureux et épicé à base de lentilles corail, parfait pour un repas réconfortant.",
-        like: 0,
+ 
         categorie: "veggy",
         motsCles: "veggy, curry, lentilles corail, épicé, réconfortant",
         video: "https://www.youtube.com/embed/0LrXnxhH5I0?si=mce7QUq7r2eShCsL",
@@ -627,7 +627,7 @@ const recettes = [
         titre: "Mediterranean Bowl",
         image: "../assets/images/veggy/mediterraneanBowl.png",
         description: "Un bol méditerranéen frais et coloré, rempli de saveurs et d'ingrédients sains.",
-        like: 0,
+ 
         categorie: "veggy",
         motsCles: "veggy, méditerranéen, bol, sain, frais",
         video: "https://www.youtube.com/embed/MRxoI5x5mdc?si=21itjrzLeL-HWuR0",
@@ -661,7 +661,7 @@ const recettes = [
         titre: "Soupe Tomate Rôties Basilic",
         image: "../assets/images/veggy/soupeTomateBasilic.png",
         description: "Une soupe réconfortante à base de tomates rôties et de basilic frais, idéale pour les soirées fraîches.",
-        like: 0,
+ 
         categorie: "veggy",
         motsCles: "veggy, soupe, tomate, basilic, réconfortant",
         video: "https://www.youtube.com/embed/qK15KwDBNBU?si=4BkjTrrSDcBIoTbV",
@@ -693,7 +693,6 @@ const recettes = [
         titre: "Risotto aux Champignons",
         image: "../assets/images/veggy/RisottoChampignons.png",
         description: "Un risotto crémeux et savoureux aux champignons, parfait pour un dîner végétarien gourmand.",
-        like: 0,
         categorie: "veggy",
         motsCles: "veggy, risotto, champignons, crémeux, végétarien",
         video: "https://www.youtube.com/embed/O_efDm0-f7Q?si=yW6-VBDRZJ7_3oOx",
@@ -729,7 +728,7 @@ const recettes = [
         titre: "Pizza aux Courgettes",
         image: "../assets/images/veggy/PizzaCourgette.png",
         description: "Une pizza légère et délicieuse garnie de courgettes fraîches, idéale pour un repas estival.",
-        like: 0,
+ 
         categorie: "veggy",
         motsCles: "veggy, pizza, courgettes, légère, estivale",
         video: "https://www.youtube.com/embed/hMNTffSZgdY?si=x7TE83evQXmjTXCY&start=5",
@@ -764,7 +763,6 @@ const recettes = [
         titre: "Wrap Épinards",
         image: "../assets/images/veggy/wrapEpinards.png",
         description: "Un wrap frais et savoureux, rempli d'épinards et d'autres ingrédients sains, parfait pour un déjeuner léger ou un en-cas.",
-        like: 0,
         categorie: "veggy",
         motsCles: "veggy, wrap, épinards, frais, léger",
         video: "https://www.youtube.com/embed/5Z-tW4eZJ24?si=CT3uQ_fyPT6Z2gCs",
@@ -797,7 +795,6 @@ const recettes = [
         titre: "Toast Avocat, Tomate et Grenade",
         image: "../assets/images/veggy/toastAvocatTomateGrenade.png",
         description: "Un toast frais et coloré, garni d'avocat crémeux, de tomates juteuses et de grenade pour un mélange de saveurs savoureux et croquant.",
-        like: 0,
         categorie: "veggy",
         motsCles: "veggy, toast, avocat, tomate, grenade, frais",
         video: "https://www.youtube.com/embed/5Z-tW4eZJ24?si=CT3uQ_fyPT6Z2gCs",
@@ -827,8 +824,8 @@ const recettes = [
         titre: "Barre de céréales",
         image: "../assets/images/snacks/barre-cereales.png",
         description:
-            "Ces barres de céréales maison sont riches en fibres, sans sucre ajouté. Elles combinent des flocons d’avoine, des noix et des fruits secs pour un snack sain et savoureux.",
-        like: 0,
+            "Barres de céréales maison sans sucre ajouté. Elles combinent des flocons d’avoine, des noix et des fruits secs pour un snack sain et savoureux.",
+ 
         categorie: "snacks",
         motsCles:
             "barre, céréales, barre de céréales, fruits secs, chocolat, snack",
@@ -867,7 +864,7 @@ const recettes = [
         image: "../assets/images/snacks/date-bowls.png",
         description:
             "Ces energy balls aux dattes sont un encas sain et nourrissant, parfait pour une collation. Riches en fibres et sans sucre ajouté, elles se préparent en quelques minutes.",
-        like: 0,
+ 
         categorie: "snacks",
         motsCles: "snack, date, bowls, collation",
         video: "../assets/videos/snacks/date-bowls.mp4",
@@ -905,8 +902,8 @@ const recettes = [
         titre: "Snickers",
         image: "../assets/images/snacks/snickers.png",
         description:
-            "Ces snickers maison, sans sucre raffiné ni conservateurs, offrent une version saine de la célèbre barre chocolatée : dattes, amandes, caramel crémeux, et chocolat noir.",
-        like: 0,
+            "Ces snickers maison, sans sucre raffiné ni conservateurs, offrent une version saine de la célèbre barre chocolatée.",
+ 
         categorie: "snacks",
         motsCles: "snack, snickers, amandes, caramel, chocolat, collation",
         video: "../assets/videos/snacks/snickers.mp4",
@@ -944,7 +941,7 @@ const recettes = [
         image: "../assets/images/snacks/Yogurt-bark2.png",
         description:
             "Le yogurt bark est une collation glacée et saine, parfaite pour l'été. Réalisé à base de yaourt grec, de fruits frais et de noix, c'est un snack gourmand, riche en protéines et sans sucre ajouté.",
-        like: 0,
+ 
         categorie: "snacks",
         motsCles: "yogurt, snack, yaourt, fruits, grec, noix",
         video: "../assets/videos/snacks/Yogurt-bark.mp4",
@@ -988,8 +985,8 @@ const recettes = [
         titre: "Élixir Détox: Fraîcheur et Pureté",
         image: "../assets/images/boissons/elixirdetox.png",
         description:
-            "Revitalisez-vous avec notre Élixir Détox : Fraîcheur et Pureté, une boisson détoxifiante composée d’ingrédients naturels, conçue pour purifier votre corps et rafraîchir vos sens.",
-        like: 0,
+            "Revitalisez-vous avec notre Élixir Détox : Fraîcheur et Pureté, une boisson détoxifiante composée d’ingrédients naturels.",
+ 
         categorie: "boissons",
         motsCles: "détox, boisson, fraîcheur, purifiant, naturel",
         video: "../assets/videos/boisson/elixirdetox.mp4",
@@ -1025,7 +1022,7 @@ const recettes = [
         titre: "Smoothie aux Fruits Rouges",
         image: "../assets/images/boissons/smoothie-rose.png",
         description: "Un smoothie rafraîchissant et vitaminé, composé de fruits rouges mélangés pour une explosion de saveurs et de nutriments.",
-        like: 0,
+ 
         categorie: "boissons",
         motsCles: "smoothie, fruits rouges, vitaminé, rafraîchissant, santé",
         video: "https://www.youtube.com/embed/somevideoid",  // Remplacez 'somevideoid' par l'identifiant de votre vidéo si disponible.

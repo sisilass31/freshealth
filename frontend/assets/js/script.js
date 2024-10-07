@@ -12,39 +12,59 @@ function toggleSidebar() {
 
 /* carousel */
 
-  const carouselContainer = document.querySelector('.carousel-container');
-  const arrowLeft = document.querySelector('.arrow-left');
-  const arrowRight = document.querySelector('.arrow-right');
+const carouselContainer = document.querySelector('.carousel-container');
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
 
-  let scrollPosition = 0;
+let scrollPosition = 0;
 
-  arrowLeft.addEventListener('click', () => {
-    scrollPosition -= 300; 
+arrowLeft.addEventListener('click', () => {
+    scrollPosition -= 300;
     carouselContainer.scroll({
-      left: scrollPosition,
-      behavior: 'smooth'
+        left: scrollPosition,
+        behavior: 'smooth'
     });
-  });
+});
 
-  arrowRight.addEventListener('click', () => {
-    scrollPosition += 300; 
+arrowRight.addEventListener('click', () => {
+    scrollPosition += 300;
     carouselContainer.scroll({
-      left: scrollPosition,
-      behavior: 'smooth'
+        left: scrollPosition,
+        behavior: 'smooth'
     });
-  });
+});
 
-  // Désactiver les boutons lorsque l'utilisateur utilise le scroll manuel
-  let isUserScrolling = false;
+// Désactiver les boutons lorsque l'utilisateur utilise le scroll manuel
+let isUserScrolling = false;
 
-  carouselContainer.addEventListener('scroll', () => {
+carouselContainer.addEventListener('scroll', () => {
     isUserScrolling = true;
-  });
+});
 
-  arrowLeft.addEventListener('click', () => {
+arrowLeft.addEventListener('click', () => {
     isUserScrolling = false;
-  });
+});
 
-  arrowRight.addEventListener('click', () => {
+arrowRight.addEventListener('click', () => {
     isUserScrolling = false;
+});
+
+/* carousel */
+
+/* faq */
+
+// Sélectionne toutes les flèches
+const faqItems = document.querySelectorAll('.faq-item');
+
+// Ajoute un écouteur d'événement à chaque flèche
+faqItems.forEach(item => {
+  const arrow = item.querySelector('.voir-plus-faq');
+
+  arrow.addEventListener('click', () => {
+    // Active/désactive la classe "active" sur l'élément FAQ
+    item.classList.toggle('active');
   });
+});
+
+
+/* faq */

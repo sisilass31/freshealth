@@ -117,7 +117,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -241,7 +241,7 @@ h1 {
 
 /*début accueil*/
 
-/* carousel */
+/* début carousel */
 
 .section-carousel {
   background: linear-gradient(
@@ -255,7 +255,7 @@ h1 {
 
 .carousel {
   position: relative;
-  width: 95%;
+  width: 90%;
   margin: 35px auto 0 auto;
   display: flex;
   justify-content: center;
@@ -266,7 +266,8 @@ h1 {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 1200px;
+  width: 1080px;
+  gap: 26px;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -276,9 +277,8 @@ h1 {
 }
 
 .carousel-item {
-  min-width: 280px;
-  height: 200px;
-  margin: 0 10px;
+  min-width: 250px;
+  height: 180px;
   cursor: pointer;
 }
 
@@ -306,10 +306,9 @@ h1 {
   right: 10px;
 }
 
-/* carousel */
-
+/* fin carousel */
 /* faq */
-
+/* faq */
 .section-faq {
   text-align: center;
   display: flex;
@@ -341,19 +340,21 @@ h1 {
   padding-top: 35px;
 }
 
-.faq-item.active {
-  background-color: var(--green);
-}
-
 .faq-item {
   display: flex;
   justify-content: space-between;
-  background-color: var(--grey);
+  background-color: var(--grey); /* Couleur de fond par défaut */
   border-radius: 10px;
   padding: 18px 22px;
-  align-items: center;
+  align-items: start;
   text-align: start;
   width: 80%;
+  max-width: 1080px;
+  transition: background-color 0.3s ease; /* Transition douce pour la couleur */
+}
+
+.faq-item.active {
+  background-color: var(--green); /* Couleur de fond lorsqu'il est actif */
 }
 
 .faq-item h4 {
@@ -371,6 +372,12 @@ h1 {
   color: var(--light-black);
   font-size: 14px;
   padding-top: 8px;
+  display: none; /* Masquer par défaut */
+}
+
+/* Afficher le texte si la section est active */
+.faq-item.active .desc-faq p {
+  display: block;
 }
 
 .voir-plus-faq {
@@ -382,14 +389,15 @@ h1 {
   cursor: pointer;
 }
 
-.active.voir-plus-faq i {
-  font-size: 18px;
-  transform: rotateZ(-45deg);
-}
-
 .voir-plus-faq i {
   font-size: 18px;
-  transform: rotateZ(135deg);
+  transform: rotateZ(135deg); /* Par défaut à 0 degré */
+  transition: transform 0.3s ease;
+}
+
+/* Rotation de la flèche quand la section est active */
+.faq-item.active .voir-plus-faq i {
+  transform: rotateZ(-45deg);
 }
 
 /* faq */
@@ -399,12 +407,10 @@ h1 {
 /*début profile*/
 
 .profile-container {
-  max-width: 900px;
   margin: 40px auto;
   background: var(--background);
-  padding: 35px;
+  padding: 0 35px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-content {
@@ -426,7 +432,13 @@ h1 {
 .profile-sidebar ul li a {
   text-decoration: none;
   font-size: 18px;
-  color: var(--green);
+  color: var(--black);
+}
+
+.titre-infos-perso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-sidebar ul li a:hover {
@@ -447,18 +459,52 @@ h1 {
 
 .profile-details {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-details-container {
+  display: flex;
+  align-items: center;
+}
+
+.change-profile-pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.personal-infos {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.img-profile {
+  display: flex;
 }
 
 .profile-photo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
   border-radius: 50%;
   margin-right: 30px;
 }
 
-form {
-  flex: 1;
+.edit-profile {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 6px 16px;
+  border-radius: 15px;
+}
+
+.form-change-profile {
+  margin-top: 15px;
 }
 
 label {
@@ -479,38 +525,51 @@ input[type="password"] {
   border-radius: 4px;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  outline: 2px solid var(--darkgreen);
+}
+
 .edit-button {
-  padding: 10px 15px;
-  background-color: var(--light-green);
-  color: var(--green);
+  padding: 10px 20px;
+  background: var(--gradient);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  margin-right: 18px;
+  border-radius: 10px;
 }
 
 .edit-button:hover {
-  background-color: var(--light-green);
-  color: var(--darkgreen);
+  background-color: var(--darkgreen);
+  color: var(--white);
 }
 
 .security-options {
   margin-top: 20px;
+}
+
+.button-security {
   display: flex;
   justify-content: end;
 }
 
 .delete-button {
-  background-color: var(--light-green);
+  background: transparent;
+  border: 2px solid var(--darkgreen);
   padding: 10px 15px;
-  color: var(--green);
-  border: none;
-  border-radius: 4px;
+  color: var(--darkgreen);
   cursor: pointer;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 .delete-button:hover {
   background-color: var(--light-green);
-  color: var(--darkgreen);
 }
 
 /*fin profile*/
