@@ -25,6 +25,7 @@
   --beige: #f2efdc;
   --white: #ffffff;
   --black: #1e1e1e;
+  --light-black: #1e1e1ec6;
   --grey: #d9d9d9;
   --light-grey: #919191;
   --like: #e85353;
@@ -67,7 +68,8 @@ h2 {
   font-weight: 400;
 }
 
-h3 {
+h3,
+h4 {
   font-weight: 500;
 }
 
@@ -254,8 +256,7 @@ h1 {
 .carousel {
   position: relative;
   width: 95%;
-  margin: auto;
-  padding-top: 35px;
+  margin: 35px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,6 +307,92 @@ h1 {
 }
 
 /* carousel */
+
+/* faq */
+
+.section-faq {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 25px;
+}
+
+.title-faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sous-titre-faq {
+  max-width: 700px;
+  text-align: center;
+  color: var(--light-black);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.faq-item.active {
+  background-color: var(--green);
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grey);
+  border-radius: 10px;
+  padding: 18px 22px;
+  align-items: center;
+  text-align: start;
+  width: 80%;
+}
+
+.faq-item h4 {
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.desc-faq {
+  text-align: initial;
+  width: 72%;
+}
+
+.desc-faq p {
+  color: var(--light-black);
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+.voir-plus-faq {
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.active.voir-plus-faq i {
+  font-size: 18px;
+  transform: rotateZ(-45deg);
+}
+
+.voir-plus-faq i {
+  font-size: 18px;
+  transform: rotateZ(135deg);
+}
+
+/* faq */
 
 /*fin accueil*/
 
@@ -635,6 +722,12 @@ footer svg {
 
 /*responsive*/
 
+@media screen and (max-width: 1350px) {
+  .carousel-container {
+    width: 900px;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .navbar-container {
     padding: 20px !important;
@@ -790,6 +883,50 @@ footer svg {
   .info-contact-container {
     padding: 0 30px !important;
   }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-container {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .titre-footer {
+    align-items: center !important;
+  }
+  .profile-details {
+    flex-direction: column;
+  }
+  .profile-content {
+    flex-direction: column;
+  }
+  .profile-sidebar {
+    display: flex;
+  }
+  .profile-container {
+    margin: 40px 20px !important;
+  }
+  .profile-sidebar ul li a {
+    font-size: 15px;
+  }
+  .profile-sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .profile-details {
+    justify-content: center;
+  }
+
+  .profile-details form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .carousel-container {
+    width: 600px;
+  }
 }
 
 @media screen and (max-width: 815px) {
@@ -835,37 +972,28 @@ footer svg {
   }
 }
 
-@media screen and (max-width: 915px) {
-  .titre-footer {
-    align-items: center !important;
+@media screen and (max-width: 700px) {
+  .carousel-container {
+    width: 300px;
   }
-  .profile-details {
-    flex-direction: column;
+  .desc-faq {
+    width: 86%;
   }
-  .profile-content {
-    flex-direction: column;
-  }
-  .profile-sidebar {
-    display: flex;
-  }
-  .profile-container {
-    margin: 40px 20px !important;
-  }
-  .profile-sidebar ul li a {
-    font-size: 15px;
-  }
-  .profile-sidebar ul {
-    display: flex;
-    justify-content: space-around;
+  .faq-item {
     width: 100%;
   }
-  .profile-details {
-    justify-content: center;
+  .sous-titre-faq {
+    font-size: 14px;
+    padding: 12px 8px 0px 8px;
   }
-
-  .profile-details form {
-    width: 100%;
-    margin-top: 20px;
+  .faq-item h4 {
+    font-size: 14px;
+  }
+  .title-faq h2 {
+    font-size: 20px;
+  }
+  .faq-container {
+    padding-top: 28px;
   }
 }
 
@@ -890,6 +1018,12 @@ footer svg {
   }
   .copyright {
     font-size: 12px;
+  }
+  .carousel-container {
+    width: 300px;
+  }
+  .faq-item {
+    padding: 18px;
   }
 }
 /*responsive*/
