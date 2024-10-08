@@ -698,7 +698,7 @@ const recettes = [
         video: "https://www.youtube.com/embed/O_efDm0-f7Q?si=yW6-VBDRZJ7_3oOx",
         ingredients: [
             { nom: "Riz arborio", image: "../assets/images/Image-Indrégients/riz-arborio.png" },
-            { nom: "Champignons (de votre choix, ex: champignons de Paris, shiitake)", image: "../assets/images/Image-Indrégients/champignons.png" },
+            { nom: "Champignons de Paris", image: "../assets/images/Image-Indrégients/champignons.png" },
             { nom: "Oignon", image: "../assets/images/Image-Indrégients/oignon.png" },
             { nom: "Ail", image: "../assets/images/Image-Indrégients/ail.png" },
             { nom: "Bouillon de légumes", image: "../assets/images/Image-Indrégients/bouillon-legumes.png" },

@@ -27,7 +27,8 @@ arrowLeft.addEventListener('click', () => {
 });
 
 arrowRight.addEventListener('click', () => {
-    scrollPosition += 300;
+    /* taille de l'image c'est à dire 250 + les 26px de gap */
+    scrollPosition += 276; 
     carouselContainer.scroll({
         left: scrollPosition,
         behavior: 'smooth'
