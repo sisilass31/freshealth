@@ -117,7 +117,7 @@ const recettes = [
         image: "../assets/images/salee/saumon-riz.png",
         description:
             "Ce plat équilibré et nutritif est parfait pour un repas sain. Cliquez pour découvrir une option délicieuse qui nourrit votre corps et vos papilles.",
- 
+
         categorie: "salées",
         motsCles: "salée, saumon, riz, salade, équilibré, nutritif",
         video: "../assets/videos/saumon-riz-salade.mp4",

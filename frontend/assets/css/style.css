@@ -713,6 +713,110 @@ input[type="password"]:focus {
 
 /*fin contact*/
 
+/*début log*/
+
+.section-log {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 28px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.section-log input {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: 12px;
+}
+
+.section-log hr {
+  height: 2px;
+  color: var(--grey);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.title-log {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-log {
+  color: var(--darkgreen);
+  text-decoration: underline;
+}
+
+.with-google {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  height: 60px;
+  margin: 15px 0;
+}
+
+.with-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-icon {
+  width: 18px;
+}
+
+.google-icon img {
+  width: 100%;
+}
+
+.or {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.or hr {
+  width: 100%;
+}
+
+.input-log {
+  position: relative;
+}
+
+.icon-input-log {
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  right: 12px;
+}
+
+.icon-input-log i {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.conditions {
+  display: flex;
+  gap: 18px;
+}
+
+.button-log {
+  background: var(--gradient);
+  border: none;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--white);
+  border-radius: 10px;
+  margin-top: 15px;
+  
+}
+
+/*fin contact*/
+
 /*debut footer*/
 
 footer svg {
