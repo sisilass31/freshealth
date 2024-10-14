@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="titlerecipe">${article.titre}</h3>
                     <p>${article.description}</p>
                     <div class="cardlovevoirplus">
-                        <i id="love-${index}" class='bx bxs-heart'></i>
                         <button class="buttonrecipevoirplus" data-index="${index}">Voir plus</button>
                     </div>
                 </div>

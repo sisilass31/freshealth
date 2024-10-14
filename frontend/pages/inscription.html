@@ -7,26 +7,30 @@
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- boxicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- title -->
-    <title>Home - Freshealth</title>
+    <title>Connexion - Freshealth</title>
+    <!-- connexion google -->
+    <meta name="google-signin-client_id" content="copier ici votre id">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header class="background-accueil">
+    <header>
         <nav>
-            <div class="navbar-container">
+            <div class="navbar-container shadow-navbar">
                 <!-- navbar -->
                 <div class="logo">
-                    <a href="./index.html"><img src="./assets/images/logo/logo.png" alt="freshealth"></a>
+                    <a href="./index.html"><img src="../assets/images/logo/logo.png" alt="freshealth"></a>
                 </div>
                 <div class="navbar-links" id="navbar-links">
-                    <a href="./pages/recettes.html">Recettes</a>
-                    <a href="#">Conseils</a>
+                    <a href="./recettes.html">Recettes</a>
                     <a href="#">Organisation</a>
-                    <a href="./pages/contact.html">Contact</a>
+                    <a href="./contact.html">Contact</a>
                 </div>
                 <!-- navbar -->
                 <div class="search-user">
@@ -37,7 +41,7 @@
                     <!-- searchbar -->
 
                     <!-- account -->
-                    <a href="./pages/profile.html">
+                    <a href=".profile.html">
                         <div class="user">
                             <i class='bx bxs-user'></i>
                         </div>
@@ -50,11 +54,6 @@
                 </div>
             </div>
         </nav>
-        <div class="titre-accueil">
-            <h1 class="welcome-titre">Bienvenue sur Freashealth</h1>
-            <p class="desc-titre-accueil">Freashealth est votre plateforme dédiée à l'alimentation saine. Retrouvez des conseils et des recettes pour adopter une alimentation équilibrée et améliorer votre bien-être.</p>
-            <a href="./pages/recettes.html" class="button-primary">Nos recettes</a>
-        </div>
         <!--sidebar-->
         <div id="popup_sidebar" class="overlay_sidebar">
             <div class="box_sidebar">
@@ -64,11 +63,16 @@
                             <a class="close" href="#" onclick="toggleSidebar()">&times;</a>
                         </div>
                         <div class="side_link">
+                            <!-- <div class="searchbar">
+                                <form action="#">
+                                    <input type="search" placeholder="Rechercher" required>
+                                    <i class='bx bx-search-alt-2'></i>
+                                </form>
+                            </div> -->
                             <ul class="side_ul">
-                                <li><a href="./pages/recettes.html" class="nav-link">Recettes</a></li>
-                                <li><a href="./pages/conseils.html" class="nav-link">Conseils</a></li>
-                                <li><a href="./pages/organisation.html" class="nav-link">Organisation</a></li>
-                                <li><a href="./pages/contact.html" class="nav-link">Contact</a></li>
+                                <li><a href="./recettes.html" class="nav-link">Recettes</a></li>
+                                <li><a href="./organisation.html" class="nav-link">Organisation</a></li>
+                                <li><a href="./contact.html" class="nav-link">Contact</a></li>
                             </ul>
                         </div>
                         <div class="membre">
@@ -76,18 +80,15 @@
                         </div>
                         <div class="button_sidebar">
                             <div class="button_sidebar">
-                                <div class="button_sidebar">
-                                    <a href="../html/inscrire.html" class="btn-rejoindre btn-sidebar">Nous rejoindre</a>
+                                <a href="../html/inscrire.html" class="btn-rejoindre btn-sidebar">Nous rejoindre</a>
 
-                                </div>
-                                <div class="button_sidebar">
-                                    <a href="../html/se-connecter.html"
-                                        class="btn-identifier btn-sidebar">S'identifier</a>
-                                </div>
+                            </div>
+                            <div class="button_sidebar">
+                                <a href="../html/se-connecter.html" class="btn-identifier btn-sidebar">S'identifier</a>
                             </div>
                         </div>
                         <div class="icon_sidebar">
-                            <a href="./pages/profile.html">
+                            <a href="./profile.html">
                                 <div class="settings-logout">
                                     <i class='bx bx-cog'></i>
                                     <p>Paramètres</p>
@@ -128,10 +129,63 @@
         </div>
         <!--sidebar-->
     </header>
-    <!-- contenu accueil -->
     <main>
+        <section class="section-log">
+            <div class="title-log">
+                <h2>Se connecter</h2>
+                <hr>
+                <p>Vous avez déjà un compte? Connectez vous <a href="./connexion.html" class="link-log">ici</a></p>
+            </div>
+
+            <div class="form-connexion-container log-container">
+                <form action="POST">
+                    <div class="input-name">
+                        <div class="input-log">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom">
+                        </div>
+
+                        <div class="input-log">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prnom">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="input-log">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email">
+                    </div>
+                    <hr>
+
+                    <div class="input-log">
+                        <label for="mdp">Mot de passe</label>
+                        <input type="password" id="mdp">
+                        <div class="icon-input-log">
+                            <a href="#">
+                                <i class='bx bx-show'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="input-log">
+                        <label for="confirmMdp">Confirmer le mot de passe</label>
+                        <input type="password" id="confirmMdp">
+                        <div class="icon-input-log">
+                            <a href="#">
+                                <i class='bx bx-show'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="conditions">
+                        <input type="checkbox">
+                        <p>J'accepte les <a href="#" class="link-log">conditions générales</a> d'utilisation.</p>
+                    </div>
+                    <button type="submit" class="button-log">S'inscrire</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
     <footer>
         <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
             xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +240,7 @@
             </div>
         </div>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
