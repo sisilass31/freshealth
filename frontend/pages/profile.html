@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/recettes.css">
     <!-- boxicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- title -->
@@ -209,25 +210,76 @@
 
                 <!-- Autres sections -->
                 <div id="favorites" class="section" style="display:none;">
-                    <!-- Contenu pour les recettes favorites -->
+                    <!-- Contenu (exemple) pour les recettes favorites -->
+                    <div class="images-recettes-fav-container">
+                        <div class="images-recettes-fav">
+                            <img src="../assets/images/salee/bagel.png" alt="bagel">
+                        </div>
+                        <div class="images-recettes-fav">
+                            <img src="../assets/images/salee/bagel.png" alt="bagel">
+                        </div>
+                        <div class="images-recettes-fav">
+                            <img src="../assets/images/salee/bagel.png" alt="bagel">
+                        </div>
+                        <div class="images-recettes-fav">
+                            <img src="../assets/images/salee/bagel.png" alt="bagel">
+                        </div>
+                        <div class="images-recettes-fav">
+                            <img src="../assets/images/salee/bagel.png" alt="bagel">
+                        </div>
+                    </div>
                 </div>
 
                 <div id="mylist" class="section" style="display:none;">
-                    <!-- Contenu pour la liste de courses -->
+                    <!-- Contenu (exemple) pour la liste de courses -->
+                    <div class="container-ingredinent-course">
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/pain-bagel.png" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/oignon.jpeg" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/fromage-frais.png" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/saumon-fumé.jpeg" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/mache.png" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                        <div class="card-ingr-fav">
+                            <div class="images-ingr-fav">
+                                <img src="../assets/images/Image-Indrégients/Bagel/avocat.png" alt="bagel">
+                            </div>
+                            <p>Bagel</p>
+                            <button class="ajouter-course-PopUp retirer-ingr">Retirer</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
     </main>
     <footer>
         <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
