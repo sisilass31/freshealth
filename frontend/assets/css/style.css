@@ -80,6 +80,7 @@ h1 {
 /*general*/
 
 /*début navbar*/
+
 .background-accueil {
   background-image: url(../images/background/background-accueil.png);
   background-repeat: no-repeat;
@@ -94,6 +95,7 @@ h1 {
   justify-content: space-between;
   padding: 25px 40px;
   backdrop-filter: blur(1px);
+  height: 100px;
 }
 
 .shadow-navbar {
@@ -416,13 +418,25 @@ h1 {
 
 .profile-content {
   display: flex;
+  gap: 50px;
 }
 
 .profile-sidebar {
-  flex: 1;
+  width: 150px;
+}
+
+.profile-content hr {
+  background-color: var(--grey);
+  height: inherit;
+  width: 1px;
+  border-radius: 10px;
+  border: none;
 }
 
 .profile-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   list-style-type: none;
 }
 
@@ -434,6 +448,14 @@ h1 {
   text-decoration: none;
   font-size: 18px;
   color: var(--black);
+  padding: 8px 15px;
+  border-radius: 18px;
+  font-size: 16px;
+}
+
+.profile-sidebar ul li a:focus {
+  color: var(--darkgreen);
+  background-color: var(--light-green);
 }
 
 .titre-infos-perso {
@@ -812,7 +834,6 @@ input[type="password"]:focus {
   color: var(--white);
   border-radius: 10px;
   margin-top: 15px;
-  
 }
 
 /*fin contact*/
@@ -1064,15 +1085,18 @@ footer svg {
   }
   .profile-content {
     flex-direction: column;
+    gap: 40px;
   }
   .profile-sidebar {
     display: flex;
   }
   .profile-container {
-    margin: 40px 20px !important;
+    padding: 0 25px;
   }
   .profile-sidebar ul li a {
     font-size: 15px;
+    padding: 8px 18px;
+    font-size: 16px;
   }
   .profile-sidebar ul {
     display: flex;
@@ -1090,6 +1114,29 @@ footer svg {
 
   .carousel-container {
     width: 528px;
+  }
+
+  .profile-sidebar ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0px;
+  }
+
+  .titre-infos-perso {
+    align-items: start;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+  }
+
+  .profile-sidebar ul li {
+    margin-bottom: 0px;
+  }
+
+  .profile-content hr {
+    height: 1px;
+    width: 100%;
   }
 }
 
@@ -1191,6 +1238,48 @@ footer svg {
   }
   .carousel {
     width: 100%;
+  }
+  .profile-photo {
+    width: 50px;
+    margin-right: 15px;
+  }
+  .edit-profile {
+    padding: 6px 10px;
+  }
+  .change-profile-pic {
+    align-items: start;
+    padding: 15px;
+  }
+
+  .profile-details p {
+    font-size: 12px;
+  }
+
+  .profile-details h3 {
+    font-size: 14px;
+  }
+
+  .profile-container {
+    padding: 0 22px;
+  }
+
+  .edit-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .button-security {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-sidebar ul {
+    justify-content: space-between;
+  }
+  .profile-sidebar ul li a {
+    font-size: 14px;
+    padding: 5px 10px;
   }
 }
 /*responsive*/
