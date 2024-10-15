@@ -25,6 +25,7 @@
   --beige: #f2efdc;
   --white: #ffffff;
   --black: #1e1e1e;
+  --light-black: #1e1e1ec6;
   --grey: #d9d9d9;
   --light-grey: #919191;
   --like: #e85353;
@@ -67,7 +68,8 @@ h2 {
   font-weight: 400;
 }
 
-h3 {
+h3,
+h4 {
   font-weight: 500;
 }
 
@@ -91,6 +93,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: 25px 40px;
+  backdrop-filter: blur(1px);
 }
 
 .shadow-navbar {
@@ -115,7 +118,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -239,7 +242,7 @@ h1 {
 
 /*début accueil*/
 
-/* carousel */
+/* début carousel */
 
 .section-carousel {
   background: linear-gradient(
@@ -253,9 +256,8 @@ h1 {
 
 .carousel {
   position: relative;
-  width: 95%;
-  margin: auto;
-  padding-top: 35px;
+  width: 90%;
+  margin: 35px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,7 +267,8 @@ h1 {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 1200px;
+  width: 1080px;
+  gap: 26px;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -275,9 +278,8 @@ h1 {
 }
 
 .carousel-item {
-  min-width: 280px;
-  height: 200px;
-  margin: 0 10px;
+  min-width: 250px;
+  height: 180px;
   cursor: pointer;
 }
 
@@ -305,19 +307,111 @@ h1 {
   right: 10px;
 }
 
-/* carousel */
+/* fin carousel */
+/* faq */
+/* faq */
+.section-faq {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 25px;
+}
+
+.title-faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sous-titre-faq {
+  max-width: 700px;
+  text-align: center;
+  color: var(--light-black);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grey); /* Couleur de fond par défaut */
+  border-radius: 10px;
+  padding: 18px 22px;
+  align-items: start;
+  text-align: start;
+  width: 80%;
+  max-width: 1080px;
+  transition: background-color 0.3s ease; /* Transition douce pour la couleur */
+}
+
+.faq-item.active {
+  background-color: var(--green); /* Couleur de fond lorsqu'il est actif */
+}
+
+.faq-item h4 {
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.desc-faq {
+  text-align: initial;
+  width: 72%;
+}
+
+.desc-faq p {
+  color: var(--light-black);
+  font-size: 14px;
+  padding-top: 8px;
+  display: none; /* Masquer par défaut */
+}
+
+/* Afficher le texte si la section est active */
+.faq-item.active .desc-faq p {
+  display: block;
+}
+
+.voir-plus-faq {
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.voir-plus-faq i {
+  font-size: 18px;
+  transform: rotateZ(135deg); /* Par défaut à 0 degré */
+  transition: transform 0.3s ease;
+}
+
+/* Rotation de la flèche quand la section est active */
+.faq-item.active .voir-plus-faq i {
+  transform: rotateZ(-45deg);
+}
+
+/* faq */
 
 /*fin accueil*/
 
 /*début profile*/
 
 .profile-container {
-  max-width: 900px;
   margin: 40px auto;
   background: var(--background);
-  padding: 35px;
+  padding: 0 35px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-content {
@@ -339,7 +433,13 @@ h1 {
 .profile-sidebar ul li a {
   text-decoration: none;
   font-size: 18px;
-  color: var(--green);
+  color: var(--black);
+}
+
+.titre-infos-perso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-sidebar ul li a:hover {
@@ -360,18 +460,52 @@ h1 {
 
 .profile-details {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-details-container {
+  display: flex;
+  align-items: center;
+}
+
+.change-profile-pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.personal-infos {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.img-profile {
+  display: flex;
 }
 
 .profile-photo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
   border-radius: 50%;
   margin-right: 30px;
 }
 
-form {
-  flex: 1;
+.edit-profile {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 6px 16px;
+  border-radius: 15px;
+}
+
+.form-change-profile {
+  margin-top: 15px;
 }
 
 label {
@@ -392,38 +526,51 @@ input[type="password"] {
   border-radius: 4px;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  outline: 2px solid var(--darkgreen);
+}
+
 .edit-button {
-  padding: 10px 15px;
-  background-color: var(--light-green);
-  color: var(--green);
+  padding: 10px 20px;
+  background: var(--gradient);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  margin-right: 18px;
+  border-radius: 10px;
 }
 
 .edit-button:hover {
-  background-color: var(--light-green);
-  color: var(--darkgreen);
+  background-color: var(--darkgreen);
+  color: var(--white);
 }
 
 .security-options {
   margin-top: 20px;
+}
+
+.button-security {
   display: flex;
   justify-content: end;
 }
 
 .delete-button {
-  background-color: var(--light-green);
+  background: transparent;
+  border: 2px solid var(--darkgreen);
   padding: 10px 15px;
-  color: var(--green);
-  border: none;
-  border-radius: 4px;
+  color: var(--darkgreen);
   cursor: pointer;
+  font-weight: 500;
+  border-radius: 10px;
 }
 
 .delete-button:hover {
   background-color: var(--light-green);
-  color: var(--darkgreen);
 }
 
 /*fin profile*/
@@ -566,6 +713,110 @@ input[type="password"] {
 
 /*fin contact*/
 
+/*début log*/
+
+.section-log {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 28px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.section-log input {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  padding: 12px;
+}
+
+.section-log hr {
+  height: 2px;
+  color: var(--grey);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.title-log {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-log {
+  color: var(--darkgreen);
+  text-decoration: underline;
+}
+
+.with-google {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  height: 60px;
+  margin: 15px 0;
+}
+
+.with-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-icon {
+  width: 18px;
+}
+
+.google-icon img {
+  width: 100%;
+}
+
+.or {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.or hr {
+  width: 100%;
+}
+
+.input-log {
+  position: relative;
+}
+
+.icon-input-log {
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  right: 12px;
+}
+
+.icon-input-log i {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.conditions {
+  display: flex;
+  gap: 18px;
+}
+
+.button-log {
+  background: var(--gradient);
+  border: none;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--white);
+  border-radius: 10px;
+  margin-top: 15px;
+  
+}
+
+/*fin contact*/
+
 /*debut footer*/
 
 footer svg {
@@ -634,6 +885,12 @@ footer svg {
 /*fin footer*/
 
 /*responsive*/
+
+@media screen and (max-width: 1350px) {
+  .carousel-container {
+    width: 802px;
+  }
+}
 
 @media screen and (max-width: 1240px) {
   .navbar-container {
@@ -790,6 +1047,50 @@ footer svg {
   .info-contact-container {
     padding: 0 30px !important;
   }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-container {
+    width: 802px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .titre-footer {
+    align-items: center !important;
+  }
+  .profile-details {
+    flex-direction: column;
+  }
+  .profile-content {
+    flex-direction: column;
+  }
+  .profile-sidebar {
+    display: flex;
+  }
+  .profile-container {
+    margin: 40px 20px !important;
+  }
+  .profile-sidebar ul li a {
+    font-size: 15px;
+  }
+  .profile-sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .profile-details {
+    justify-content: center;
+  }
+
+  .profile-details form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .carousel-container {
+    width: 528px;
+  }
 }
 
 @media screen and (max-width: 815px) {
@@ -835,37 +1136,31 @@ footer svg {
   }
 }
 
-@media screen and (max-width: 915px) {
-  .titre-footer {
-    align-items: center !important;
+@media screen and (max-width: 700px) {
+  .carousel-container {
+    width: 252px;
   }
-  .profile-details {
-    flex-direction: column;
+  .carousel {
+    width: 65%;
   }
-  .profile-content {
-    flex-direction: column;
+  .desc-faq {
+    width: 86%;
   }
-  .profile-sidebar {
-    display: flex;
-  }
-  .profile-container {
-    margin: 40px 20px !important;
-  }
-  .profile-sidebar ul li a {
-    font-size: 15px;
-  }
-  .profile-sidebar ul {
-    display: flex;
-    justify-content: space-around;
+  .faq-item {
     width: 100%;
   }
-  .profile-details {
-    justify-content: center;
+  .sous-titre-faq {
+    font-size: 14px;
+    padding: 12px 8px 0px 8px;
   }
-
-  .profile-details form {
-    width: 100%;
-    margin-top: 20px;
+  .faq-item h4 {
+    font-size: 14px;
+  }
+  .title-faq h2 {
+    font-size: 20px;
+  }
+  .faq-container {
+    padding-top: 28px;
   }
 }
 
@@ -891,5 +1186,50 @@ footer svg {
   .copyright {
     font-size: 12px;
   }
+  .faq-item {
+    padding: 18px;
+  }
+  .carousel {
+    width: 100%;
+  }
 }
 /*responsive*/
+
+/*@media screen and (max-width: 915px) {
+.profile-container {
+margin: 40px 20px !important;
+}
+.profile-details {
+width: 100%;
+}
+}
+.change-profile-pic {
+padding: 15px 20px;
+padding: 15px;
+width: 100%;
+}
+.profile-container {
+padding: 0 35px;
+padding: 0 20px;
+}
+.profile-photo {
+width: 80px;
+margin-right: 30px;
+width: 49px;
+margin-right: 15px;
+}
+.edit-profile {
+padding: 6px 16px;
+padding: 11px;
+}
+Feuille de style intégrée #2
+.profile-details h3 {
+font-size: 16px;
+}
+.desc-profile p {
+font-size: 14px;
+}
+.edit-profile p {
+font-size: 14px;
+display: none;
+}*/

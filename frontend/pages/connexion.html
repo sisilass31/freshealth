@@ -11,7 +11,12 @@
     <!-- boxicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- title -->
-    <title>Mon Compte - Freshealth</title>
+    <title>Connexion - Freshealth</title>
+    <!-- connexion google -->
+    <meta name="google-signin-client_id" content="copier ici votre id">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -124,109 +129,52 @@
         </div>
         <!--sidebar-->
     </header>
-
-    <div class="profile-container">
-
-        <div class="profile-content">
-            <div class="profile-sidebar">
-                <ul>
-                    <li><a href="#" onclick="showSection('profile')">Profil</a></li>
-                    <li><a href="#" onclick="showSection('favorites')">Mes Favoris</a></li>
-                    <li><a href="#" onclick="showSection('mylist')">Ma Liste</a></li>
-                    <li><a href="#" onclick="showSection('security')">Sécurité</a></li>
-                </ul>
+    <main>
+        <section class="section-log">
+            <div class="title-log">
+                <h2>Se connecter</h2>
+                <hr>
+                <p>Vous n’avez pas de compte? Inscrivez vous <a href="./inscription.html" class="link-log">ici</a></p>
             </div>
-            <div class="profile-main-content">
-                <!-- Section Profil -->
-                <div id="profile" class="section" style="display: block;">
-                    <div class="profile-details">
-                        <div class="change-profile-pic">
-                            <div class="profile-details-container">
-                                <div class="img-profile">
-                                    <img src="/frontend/assets/images/Icones/profile-photo.jpg" alt="Photo de Profil"
-                                        class="profile-photo">
-                                </div>
-                                <div class="desc-profile">
-                                    <h3>Jane Cooper</h3>
-                                    <p>janecooper@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="edit-profile">
-                                <p>Edit</p>
-                                <i class='bx bx-edit-alt'></i>
-                            </div>
+
+            <div class="form-connexion-container log-container">
+                <div class="google-container">
+                    <div id="gSignIn" class="with-google">
+                        <div class="google-icon">
+                            <img src="../assets/images/Icones/google.png" alt="Google">
                         </div>
-                        <div class="personal-infos">
-                            <div class="titre-infos-perso">
-                                <h3>Informations personnelles </h3>
-                                <div class="edit-profile">
-                                    <p>Edit</p>
-                                    <i class='bx bx-edit-alt'></i>
-                                </div>
-                            </div>
-                            <form class="form-change-profile">
-                                <label for="first-name">Prénom</label>
-                                <input type="text" id="first-name" name="first-name" placeholder="Jean">
-
-                                <label for="last-name">Nom</label>
-                                <input type="text" id="last-name" name="last-name" placeholder="Dupont">
-
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="jean.dupont@example.com">
-
-                                <label for="address">Adresse</label>
-                                <input type="text" id="address" name="address" placeholder="123 Rue Exemple, Paris">
-
-                                <label for="phone">Téléphone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00">
-
-                                <button type="submit" class="edit-button">Modifier</button>
-                            </form>
+                        <p>Se connecter avec Google</p>
+                    </div>
+                    <div class="or">
+                        <hr>
+                        <p>ou</p>
+                        <hr>
+                    </div>
+                    <div class="userContent"></div>
+                </div>
+                <form action="POST">
+                    <div class="input-log">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email">
+                        <div class="icon-input-log">
+                            <i class='bx bx-envelope'></i>
                         </div>
                     </div>
-                </div>
-
-                <!-- Section Sécurité -->
-                <div id="security" class="section" style="display: none;">
-                    <form class="personal-infos">
-                        <label for="current-password">Mot de passe actuel</label>
-                        <input type="password" id="current-password" name="current-password">
-
-                        <label for="new-password">Nouveau mot de passe</label>
-                        <input type="password" id="new-password" name="new-password">
-
-                        <label for="confirm-password">Confirmer le mot de passe</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
-
-                        <div class="button-security">
-                            <button type="submit" class="edit-button">Modifier le mot de passe</button>
-                            <button class="delete-button" onclick="showSection('delete-account')">Supprimer le
-                                compte</button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Autres sections -->
-                <div id="favorites" class="section" style="display:none;">
-                    <!-- Contenu pour les recettes favorites -->
-                </div>
-
-                <div id="mylist" class="section" style="display:none;">
-                    <!-- Contenu pour la liste de courses -->
-                </div>
+                    <hr>
+                    <div class="input-log">
+                        <label for="mdp">Mot de passe</label>
+                        <input type="password" id="mdp">
+                        <a href="#">
+                            <div class="icon-input-log">
+                                <i class='bx bx-show'></i>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Vous avez oublié votre mot de passe oublié?</p>
+                    <button type="submit" class="button-log">Se connecter</button>
+                </form>
             </div>
-        </div>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+        </section>
     </main>
     <footer>
         <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
@@ -277,7 +225,7 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    <p>© 2024 Freashealth. Tous droits réservés. Création de Soumaya, Syrine, Nacera, et Sihem.</p>
+                    <p> © 2024 Freashealth. Tous droits réservés. Création de Soumaya, Syrine, Nacera, et Sihem.</p>
                 </div>
             </div>
         </div>
