@@ -455,7 +455,7 @@ h1 {
 
 .profile-sidebar ul li a:focus {
   color: var(--darkgreen);
-  background-color: var(--light-green);
+  background-color: var(--light-green) !important;
 }
 
 .titre-infos-perso {
